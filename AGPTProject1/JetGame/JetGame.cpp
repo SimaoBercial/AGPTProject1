@@ -1,6 +1,9 @@
 #include <iostream>
+#include "JetEngine.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	JetEngine engine;
+
+	engine.start();
 }

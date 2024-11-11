@@ -129,6 +129,9 @@
   <ItemGroup>
     <ClCompile Include="JetEngine.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="JetEngine.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
