@@ -1,0 +1,6 @@
+﻿  SDL2Demo.cpp
+C:\Users\2221924\source\repos\SDL2Demo\SDL2Demo\SDL2Demo.cpp(88,43): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\2221924\source\repos\SDL2Demo\SDL2Demo\SDL2Demo.cpp(90,43): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+C:\Users\2221924\source\repos\SDL2Demo\SDL2Demo\SDL2Demo.cpp(92,43): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+C:\Users\2221924\source\repos\SDL2Demo\SDL2Demo\SDL2Demo.cpp(94,43): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+  SDL2Demo.vcxproj -> C:\Users\2221924\source\repos\SDL2Demo\x64\Debug\SDL2Demo.exe

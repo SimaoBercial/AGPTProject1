@@ -1,0 +1,14 @@
+﻿  JetEngine.cpp
+  Window.cpp
+C:\Users\2221924\Downloads\AGPTProject1-main\AGPTProject1-main\AGPTProject1\JetEngine\Window.h(11,8): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'JetEngine.cpp')
+      C:\Users\2221924\Downloads\AGPTProject1-main\AGPTProject1-main\AGPTProject1\Vendor\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+C:\Users\2221924\Downloads\AGPTProject1-main\AGPTProject1-main\AGPTProject1\Vendor\SDL2\include\SDL_video.h(95,16): warning C4099: 'SDL_Window': type name first seen using 'class' now seen using 'struct'
+  (compiling source file 'Window.cpp')
+      C:\Users\2221924\Downloads\AGPTProject1-main\AGPTProject1-main\AGPTProject1\JetEngine\Window.h(11,8):
+      see declaration of 'SDL_Window'
+  
+  Generating Code...
+  JetEngine.vcxproj -> C:\Users\2221924\Downloads\AGPTProject1-main\AGPTProject1-main\AGPTProject1\x64\Debug\JetEngine.lib
