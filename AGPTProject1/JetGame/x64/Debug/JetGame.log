@@ -1,12 +1,7 @@
-﻿  JetGame.cpp
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(13,8): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'JetGame.cpp')
-      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_video.h(95,16):
-      see declaration of 'SDL_Window'
-  
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(14,8): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'JetGame.cpp')
-      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_render.h(141,8):
-      see declaration of 'SDL_Renderer'
-  
-  JetGame.vcxproj -> D:\Desktop\AGPTProject1\AGPTProject1\x64\Debug\JetGame.exe
+﻿D:\Program Files\UnityHub\Microsoft Visual Studio 2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(531,5): warning MSB8028: The intermediate directory (x64\Debug\) contains files shared from another project (JetGame.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Enemies.cpp
+  Level.cpp
+  Missile.cpp
+  Spaceship.cpp
+  Generating Code...
+  JetGame.vcxproj -> D:\Desktop\AGPTProject1\AGPTProject1\x64\Debug\Xenon Clone Game.exe

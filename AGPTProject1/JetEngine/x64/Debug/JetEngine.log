@@ -1,24 +1,16 @@
-﻿  JetEngine.cpp
-  Window.cpp
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(13,8): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'JetEngine.cpp')
-      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_video.h(95,16):
-      see declaration of 'SDL_Window'
-  
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(14,8): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'JetEngine.cpp')
-      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_render.h(141,8):
-      see declaration of 'SDL_Renderer'
-  
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(13,8): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'Window.cpp')
-      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_video.h(95,16):
-      see declaration of 'SDL_Window'
-  
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(14,8): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
-  (compiling source file 'Window.cpp')
-      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_render.h(141,8):
-      see declaration of 'SDL_Renderer'
-  
+﻿  Actor.cpp
+  JetEngine.cpp
+  Player.cpp
+  WorldLevel.cpp
   Generating Code...
+D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(13,8): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'JetEngine.cpp')
+      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(14,8): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'JetEngine.cpp')
+      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_render.h(141,8):
+      see declaration of 'SDL_Renderer'
+  
   JetEngine.vcxproj -> D:\Desktop\AGPTProject1\AGPTProject1\x64\Debug\JetEngine.lib

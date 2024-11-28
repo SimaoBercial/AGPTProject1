@@ -3,18 +3,6 @@
   "WorkspaceRootPath": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\JetGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetGame\\JetGame.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\Window.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\Window.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\JetEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\JetEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
@@ -35,53 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "JetGame.cpp",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\JetGame.cpp",
-              "RelativeDocumentMoniker": "JetGame\\JetGame.cpp",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\JetGame.cpp",
-              "RelativeToolTip": "JetGame\\JetGame.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T14:47:57.284Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "JetEngine.cpp",
               "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\JetEngine.cpp",
               "RelativeDocumentMoniker": "JetEngine\\JetEngine.cpp",
               "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\JetEngine.cpp",
               "RelativeToolTip": "JetEngine\\JetEngine.cpp",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-28T11:40:12.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Window.h",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Window.h",
-              "RelativeDocumentMoniker": "JetEngine\\Window.h",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Window.h",
-              "RelativeToolTip": "JetEngine\\Window.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-11-27T12:59:45.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Window.cpp",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Window.cpp",
-              "RelativeDocumentMoniker": "JetEngine\\Window.cpp",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Window.cpp",
-              "RelativeToolTip": "JetEngine\\Window.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAQwAwAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-11-18T11:58:09.193Z",
+              "WhenOpened": "2024-11-28T20:28:58.2Z",
               "EditorCaption": ""
             }
           ]

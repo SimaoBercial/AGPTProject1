@@ -24,6 +24,7 @@
     <ProjectGuid>{e5acc890-5c63-438f-b6b9-d7d7db7c2e3e}</ProjectGuid>
     <RootNamespace>JetGame</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>Xenon Clone Game</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -129,9 +130,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="JetGame.cpp">
+    <ClCompile Include="Enemies.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="Missile.cpp" />
+    <ClCompile Include="Spaceship.cpp" />
+    <ClCompile Include="Xenon Clone Game.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)JetEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Enemies.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="Missile.h" />
+    <ClInclude Include="Spaceship.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -17,6 +17,7 @@ Window::~Window() {
 	}
 }
 
+
 SDL_Renderer* Window::SetRenderTarget()
 {
 	if (!window) {
