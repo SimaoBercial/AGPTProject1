@@ -1,2 +1,10 @@
 ﻿  JetGame.cpp
-  JetGame.vcxproj -> C:\Users\2221924\Downloads\AGPTProject1-main\AGPTProject1-main\AGPTProject1\x64\Debug\JetGame.exe
+D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(9,14): error C2143: syntax error: missing ';' before '*'
+  (compiling source file 'JetGame.cpp')
+  
+D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(9,2): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'JetGame.cpp')
+  
+D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(9,33): error C2238: unexpected token(s) preceding ';'
+  (compiling source file 'JetGame.cpp')
+  

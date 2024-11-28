@@ -5,10 +5,11 @@ class Window
 public:
 	Window();
 	~Window();
-	SDL_Renderer* SetRenderTarget(SDL_Window* window, int index, Uint32 flags);
 
+	SDL_Renderer* SetRenderTarget();
+	
 private:
-	class SDL_Window* window;
-
+	class SDL_Window* window = nullptr;
+	class SDL_Renderer* renderTarget = nullptr;
 };
 

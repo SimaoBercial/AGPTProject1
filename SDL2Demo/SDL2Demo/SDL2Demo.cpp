@@ -23,7 +23,7 @@ SDL_Texture* LoadTexture(std::string filePath, SDL_Renderer* renderTarget)
 int main(int argc, char** argv)
 {
 
-    SDL_Window* window = nullptr;
+    /*SDL_Window* window = nullptr;
     SDL_Texture* currentImage = nullptr;
     SDL_Renderer* renderTarget = nullptr;
     SDL_Texture* background = nullptr;
@@ -37,19 +37,19 @@ int main(int argc, char** argv)
 
     SDL_Rect playerPosition;
     playerPosition.x = playerPosition.y = 0;
-    playerPosition.w = playerPosition.h = 32;
+    playerPosition.w = playerPosition.h = 32;*/
 
     SDL_Init(SDL_INIT_VIDEO);
 
-    window = SDL_CreateWindow("SDL2 Demo!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
+    //window = SDL_CreateWindow("SDL2 Demo!", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 640, 480, SDL_WINDOW_OPENGL);
 
-    renderTarget = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-    currentImage = LoadTexture("graphics/drone.bmp", renderTarget);
-    background = LoadTexture("graphics/galaxy2.bmp", renderTarget);
-    SDL_QueryTexture(currentImage, NULL, NULL, &textureWidth, &textureHeight);
+   //renderTarget = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+   // currentImage = LoadTexture("graphics/drone.bmp", renderTarget);
+    //background = LoadTexture("graphics/galaxy2.bmp", renderTarget);
+   // SDL_QueryTexture(currentImage, NULL, NULL, &textureWidth, &textureHeight);
 
 
-    frameWidth = textureWidth / 8;
+    /*frameWidth = textureWidth / 8;
     frameHeight = textureHeight / 2;
 
     SDL_Rect playerRect;
@@ -64,7 +64,7 @@ int main(int argc, char** argv)
     int currentTime = 0;
     float deltaTime = 0;
 
-
+    */
     bool isRunning = true;
     SDL_Event ev;
 
