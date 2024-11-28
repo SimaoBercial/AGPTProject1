@@ -1,33 +1,24 @@
-﻿  Window.cpp
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(9,14): error C2143: syntax error: missing ';' before '*'
-  (compiling source file 'Window.cpp')
-  
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(9,2): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
-  (compiling source file 'Window.cpp')
-  
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(9,33): error C2238: unexpected token(s) preceding ';'
-  (compiling source file 'Window.cpp')
-  
-D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_video.h(95,16): warning C4099: 'SDL_Window': type name first seen using 'class' now seen using 'struct'
-  (compiling source file 'Window.cpp')
-      D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(12,8):
+﻿  JetEngine.cpp
+  Window.cpp
+D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(13,8): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'JetEngine.cpp')
+      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_video.h(95,16):
       see declaration of 'SDL_Window'
   
-D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_render.h(141,8): warning C4099: 'SDL_Renderer': type name first seen using 'class' now seen using 'struct'
-  (compiling source file 'Window.cpp')
-      D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(13,8):
+D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(14,8): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'JetEngine.cpp')
+      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_render.h(141,8):
       see declaration of 'SDL_Renderer'
   
-D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_render.h(142,16): warning C4099: 'SDL_Renderer': type name first seen using 'class' now seen using 'struct'
+D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(13,8): warning C4099: 'SDL_Window': type name first seen using 'struct' now seen using 'class'
   (compiling source file 'Window.cpp')
-      D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(13,8):
+      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_video.h(95,16):
+      see declaration of 'SDL_Window'
+  
+D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(14,8): warning C4099: 'SDL_Renderer': type name first seen using 'struct' now seen using 'class'
+  (compiling source file 'Window.cpp')
+      D:\Desktop\AGPTProject1\AGPTProject1\Vendor\SDL2\include\SDL_render.h(141,8):
       see declaration of 'SDL_Renderer'
   
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.cpp(20,23): error C2039: 'SetRenderTarget': is not a member of 'Window'
-      D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.h(3,7):
-      see declaration of 'Window'
-  
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.cpp(22,7): error C2065: 'window': undeclared identifier
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.cpp(25,2): error C2065: 'renderTarget': undeclared identifier
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.cpp(25,36): error C2065: 'window': undeclared identifier
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Window.cpp(26,9): error C2065: 'renderTarget': undeclared identifier
+  Generating Code...
+  JetEngine.vcxproj -> D:\Desktop\AGPTProject1\AGPTProject1\x64\Debug\JetEngine.lib
