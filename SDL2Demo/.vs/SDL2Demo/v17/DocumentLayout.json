@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Desktop\\AGPTProject1\\SDL2Demo\\",
+  "WorkspaceRootPath": "C:\\Users\\Sauchixa\\Desktop\\AGPTProject1\\SDL2Demo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E7A1173-3856-482D-BA2A-1811E902FC31}|SDL2Demo\\SDL2Demo.vcxproj|D:\\Desktop\\AGPTProject1\\SDL2Demo\\SDL2Demo\\SDL2Demo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7E7A1173-3856-482D-BA2A-1811E902FC31}|SDL2Demo\\SDL2Demo.vcxproj|C:\\Users\\Sauchixa\\Desktop\\AGPTProject1\\SDL2Demo\\SDL2Demo\\SDL2Demo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7E7A1173-3856-482D-BA2A-1811E902FC31}|SDL2Demo\\SDL2Demo.vcxproj|solutionrelative:SDL2Demo\\SDL2Demo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,21 +14,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{d3750d8a-574b-4fb3-b7e2-aa8af40e8231}"
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{32a6260a-0121-4878-95e5-80d2f08ea4cb}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{8e5c1d1a-8a91-4406-aa56-5bf27c97d63c}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "SDL2Demo.cpp",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\SDL2Demo\\SDL2Demo\\SDL2Demo.cpp",
+              "DocumentMoniker": "C:\\Users\\Sauchixa\\Desktop\\AGPTProject1\\SDL2Demo\\SDL2Demo\\SDL2Demo.cpp",
               "RelativeDocumentMoniker": "SDL2Demo\\SDL2Demo.cpp",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\SDL2Demo\\SDL2Demo\\SDL2Demo.cpp",
+              "ToolTip": "C:\\Users\\Sauchixa\\Desktop\\AGPTProject1\\SDL2Demo\\SDL2Demo\\SDL2Demo.cpp",
               "RelativeToolTip": "SDL2Demo\\SDL2Demo.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAAAQwFgAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAADAAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-28T13:51:20.601Z",
               "EditorCaption": ""

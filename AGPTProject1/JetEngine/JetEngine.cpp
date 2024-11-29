@@ -19,8 +19,10 @@ void JetEngine::start() {
 	int currentTime = 0;
 	float deltaTime = 0;
 	float spriteframesTime = 0;
+	
 	SDL_Event event;
 
+	SDL_Texture* background = window.LoadTexture("C:\\Users\\Sauchixa\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\graphics\\galaxy2.bmp"); //to be sent from level (i guess)
 
 	//GameLoop
 	
@@ -29,6 +31,8 @@ void JetEngine::start() {
 		currentTime = SDL_GetTicks();
 		deltaTime = (currentTime - startTime) / 1000.0f;
 
+				
+
 		//Event Handling
 		while (SDL_PollEvent(&event) != 0) {
 			if (event.type == SDL_QUIT) {
@@ -36,11 +40,6 @@ void JetEngine::start() {
 			}
 		}
 
-		
-
-
-
 	}
-	SDL_Quit();
 
 }
