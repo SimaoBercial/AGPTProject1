@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Desktop\\AGPTProject1\\Box2DDemo\\",
+  "WorkspaceRootPath": "D:\\Github\\AGPTProject1\\Box2DDemo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40AB1263-817B-4BA0-B268-6A06135F3DE9}|Box2DDemo\\Box2DDemo.vcxproj|D:\\Desktop\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{40AB1263-817B-4BA0-B268-6A06135F3DE9}|Box2DDemo\\Box2DDemo.vcxproj|D:\\Github\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{40AB1263-817B-4BA0-B268-6A06135F3DE9}|Box2DDemo\\Box2DDemo.vcxproj|solutionrelative:Box2DDemo\\Box2DDemo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Box2DDemo.cpp",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp",
+              "DocumentMoniker": "D:\\Github\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp",
               "RelativeDocumentMoniker": "Box2DDemo\\Box2DDemo.cpp",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp",
+              "ToolTip": "D:\\Github\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp",
               "RelativeToolTip": "Box2DDemo\\Box2DDemo.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADsAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-04T10:09:38.865Z",
               "EditorCaption": ""

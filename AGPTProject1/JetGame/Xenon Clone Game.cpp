@@ -1,12 +1,20 @@
-#include <iostream>
+#define SDL_MAIN_HANDLED
 #include "JetEngine.h"
-#include "Window.h"
+#include "Player.h"
 
-int main(int argc, char** argv)
-{
-	JetEngine engine;
-	
-	engine.start();
 
-	return 0;
+int main() {
+    JetEngine engine("Xenon Clone", 800, 600);
+
+    Player player(engine.GetRenderer());
+
+    while (engine.IsRunning()) {
+        engine.Run();
+
+        player.HandleInput();
+        player.Update();
+        player.Render(engine.GetRenderer());
+    }
+
+    return 0;
 }

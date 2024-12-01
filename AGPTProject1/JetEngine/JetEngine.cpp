@@ -1,45 +1,67 @@
 #include "JetEngine.h"
 #include <iostream>
 #include <SDL.h>
-#include "Window.h"
 
-//https://documentation.help/SDL/index.html
-//https://stackoverflow.com/questions/21007329/what-is-an-sdl-renderer
-//https://wiki.libsdl.org/SDL3/SDL_Event
-//https://www.usb.org/sites/default/files/documents/hut1_12v2.pdf
-//https://www.youtube.com/watch?v=-CIkR1R3a_A - SDL2 Event Handling
 
-void JetEngine::start() {
-	
-	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_JOYSTICK);
+JetEngine::JetEngine(const std::string& title, int width, int height)
+    : running(true), window(nullptr), renderer(nullptr) {
+    if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_AUDIO) < 0) {
+        std::cerr << "SDL Initialization Error: " << SDL_GetError() << std::endl;
+        running = false;
+        return;
+    }
 
-	Window window;
-	bool isRunning = true;
-	int startTime = 0;
-	int currentTime = 0;
-	float deltaTime = 0;
-	float spriteframesTime = 0;
-	
-	SDL_Event event;
+    window = SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
+    if (!window) {
+        std::cerr << "Window Creation Error: " << SDL_GetError() << std::endl;
+        running = false;
+        return;
+    }
 
-	SDL_Texture* background = window.LoadTexture("C:\\Users\\Sauchixa\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\graphics\\galaxy2.bmp"); //to be sent from level (i guess)
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+    if (!renderer) {
+        std::cerr << "Renderer Creation Error: " << SDL_GetError() << std::endl;
+        running = false;
+        return;
+    }
+}
 
-	//GameLoop
-	
-	while(isRunning){
-		startTime = currentTime;
-		currentTime = SDL_GetTicks();
-		deltaTime = (currentTime - startTime) / 1000.0f;
+JetEngine::~JetEngine() {
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
+}
 
-				
+void JetEngine::Run() {
+    while (running) {
+        ProcessEvents();
+        Update();
+        Render();
+    }
+}
 
-		//Event Handling
-		while (SDL_PollEvent(&event) != 0) {
-			if (event.type == SDL_QUIT) {
-				isRunning = false;
-			}
-		}
+void JetEngine::Quit() {
+    running = false;
+}
 
-	}
+void JetEngine::ProcessEvents() {
+    SDL_Event event;
+    while (SDL_PollEvent(&event)) {
+        if (event.type == SDL_QUIT) {
+            Quit();
+        }
+    }
+}
 
+void JetEngine::Update() {
+    // Update game logic here
+}
+
+void JetEngine::Render() {
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
+    SDL_RenderClear(renderer);
+
+    // Render game objects here
+
+    SDL_RenderPresent(renderer);
 }
