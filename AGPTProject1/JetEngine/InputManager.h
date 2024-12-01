@@ -2,16 +2,23 @@
 #define INPUTMANAGER_H
 
 #include <SDL.h>
-#include <unordered_map>
 
 class InputManager {
 public:
-    static void Update();
-    static bool IsKeyPressed(SDL_Keycode key);
-    static bool IsKeyReleased(SDL_Keycode key);
+    InputManager();
+    ~InputManager();
+
+    bool ProcessInput(bool& isRunning);
+    const Uint8* GetKeyState() const;
+
+    // Gamepad input functions
+    bool IsGamepadConnected() const;
+    bool IsButtonPressed(int button) const;
+    float GetAxis(int axis) const;
 
 private:
-    static std::unordered_map<SDL_Keycode, bool> keyStates;
+    SDL_Event event;
+    SDL_GameController* gamepad;
 };
 
 #endif

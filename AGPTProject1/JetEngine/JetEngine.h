@@ -1,30 +1,30 @@
-#pragma once
-
 #ifndef JETENGINE_H
 #define JETENGINE_H
 
-#include <SDL.h>
-#include <string>
+#include "Renderer.h"
+#include "InputManager.h"
 
 class JetEngine {
 public:
-    JetEngine(const std::string& title, int width, int height);
+    JetEngine();
     ~JetEngine();
 
-    void Run();
-    void Quit();
+    bool Initialize(const std::string& windowTitle, int width, int height);
+    void Shutdown();
+    float GetDeltaTime();
+    bool ProcessInput(bool& isRunning);
 
-    bool IsRunning() const { return running; }
-    SDL_Renderer* GetRenderer() const { return renderer; }
+    Renderer* GetRenderer();
+    InputManager* GetInputManager();
 
 private:
-    bool running;
     SDL_Window* window;
-    SDL_Renderer* renderer;
+    int prevTime;
+    int currentTime;
+    float deltaTime;
 
-    void ProcessEvents();
-    void Update();
-    void Render();
+    Renderer renderer;
+    InputManager inputManager;
 };
 
 #endif

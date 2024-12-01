@@ -1,13 +1,24 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-#include <SDL.h>
 #include <string>
+#include <SDL.h>
 
 class Renderer {
 public:
-    static SDL_Texture* LoadTexture(SDL_Renderer* renderer, const std::string& filePath);
-    static void Draw(SDL_Renderer* renderer, SDL_Texture* texture, SDL_Rect* src, SDL_Rect* dest);
+    Renderer();
+    ~Renderer();
+
+    bool Initialize(SDL_Window* window);
+    void Shutdown();
+    SDL_Texture* LoadTexture(const std::string& filePath);
+    void Clear();
+    void Render(SDL_Texture* texture, const SDL_Rect* srcRect, const SDL_Rect* dstRect);
+    void Present();
+    SDL_Renderer* GetSDLRenderer() const;
+
+private:
+    SDL_Renderer* renderer;
 };
 
 #endif

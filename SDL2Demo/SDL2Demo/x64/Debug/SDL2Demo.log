@@ -1,1 +1,6 @@
-﻿  SDL2Demo.vcxproj -> C:\Users\Sauchixa\Desktop\AGPTProject1\SDL2Demo\x64\Debug\SDL2Demo.exe
+﻿  SDL2Demo.cpp
+D:\Github\AGPTProject1\SDL2Demo\SDL2Demo\SDL2Demo.cpp(88,43): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+D:\Github\AGPTProject1\SDL2Demo\SDL2Demo\SDL2Demo.cpp(90,43): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+D:\Github\AGPTProject1\SDL2Demo\SDL2Demo\SDL2Demo.cpp(92,43): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+D:\Github\AGPTProject1\SDL2Demo\SDL2Demo\SDL2Demo.cpp(94,43): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+  SDL2Demo.vcxproj -> D:\Github\AGPTProject1\SDL2Demo\x64\Debug\SDL2Demo.exe
