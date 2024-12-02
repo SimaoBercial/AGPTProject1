@@ -11,9 +11,9 @@ Player::Player()
     frameWidth(64),
     frameHeight(64),
     movingLeft(false),
-    movingRight(false),
+    movingRight(false), 
     missileTexture(nullptr),
-    missileCooldown(0.1f),
+    missileCooldown(0.2f),
     missileTimer(0.0f) {
 }
 
@@ -103,7 +103,7 @@ void Player::Update(float deltaTime) {
     for (auto it = missiles.begin(); it != missiles.end();) {
         it->Update(deltaTime);
         if (it->IsOffScreen()) {
-            it = missiles.erase(it);
+            it = missiles.erase(it); 
         }
         else {
             ++it;

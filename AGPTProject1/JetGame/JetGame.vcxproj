@@ -131,6 +131,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\JetEngine\Enemy.cpp" />
+    <ClCompile Include="..\JetEngine\Missile.cpp" />
     <ClCompile Include="..\JetEngine\Player.cpp" />
     <ClCompile Include="Background.cpp" />
     <ClCompile Include="Xenon Clone Game.cpp">
@@ -138,6 +140,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\JetEngine\Enemy.h" />
+    <ClInclude Include="..\JetEngine\Missile.h" />
     <ClInclude Include="..\JetEngine\Player.h" />
     <ClInclude Include="Background.h" />
   </ItemGroup>
