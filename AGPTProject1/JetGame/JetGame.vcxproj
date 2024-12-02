@@ -131,21 +131,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Enemies.cpp" />
-    <ClCompile Include="Level.cpp" />
-    <ClCompile Include="Missile.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Spaceship.cpp" />
+    <ClCompile Include="..\JetEngine\Player.cpp" />
+    <ClCompile Include="Background.cpp" />
     <ClCompile Include="Xenon Clone Game.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)JetEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Enemies.h" />
-    <ClInclude Include="Level.h" />
-    <ClInclude Include="Missile.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="Spaceship.h" />
+    <ClInclude Include="..\JetEngine\Player.h" />
+    <ClInclude Include="Background.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

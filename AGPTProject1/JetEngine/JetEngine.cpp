@@ -23,7 +23,6 @@ bool JetEngine::Initialize(const std::string& windowTitle, int width, int height
     if (!renderer.Initialize(window)) {
         return false;
     }
-
     return true;
 }
 

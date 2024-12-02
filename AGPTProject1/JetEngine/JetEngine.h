@@ -1,8 +1,13 @@
 #ifndef JETENGINE_H
 #define JETENGINE_H
 
+#include <string>
 #include "Renderer.h"
 #include "InputManager.h"
+#include "Player.h"
+#include "Missile.h"
+#include "Enemy.h"
+#include <vector>
 
 class JetEngine {
 public:
@@ -19,12 +24,15 @@ public:
 
 private:
     SDL_Window* window;
-    int prevTime;
-    int currentTime;
+    Uint32 prevTime, currentTime;
     float deltaTime;
 
     Renderer renderer;
     InputManager inputManager;
+
+    Player* player;
+    std::vector<Missile> missiles;
+    std::vector<Enemy> enemies;  // Store enemies in a vector
 };
 
 #endif

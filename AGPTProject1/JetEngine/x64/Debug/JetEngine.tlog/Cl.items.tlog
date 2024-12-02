@@ -1,5 +1,8 @@
-D:\Github\AGPTProject1\AGPTProject1\JetEngine\Actor.cpp;D:\Github\AGPTProject1\AGPTProject1\JetEngine\x64\Debug\Actor.obj
+D:\Github\AGPTProject1\AGPTProject1\JetEngine\Enemy.cpp;D:\Github\AGPTProject1\AGPTProject1\JetEngine\x64\Debug\Enemy.obj
+D:\Github\AGPTProject1\AGPTProject1\JetEngine\GameObject.cpp;D:\Github\AGPTProject1\AGPTProject1\JetEngine\x64\Debug\GameObject.obj
 D:\Github\AGPTProject1\AGPTProject1\JetEngine\InputManager.cpp;D:\Github\AGPTProject1\AGPTProject1\JetEngine\x64\Debug\InputManager.obj
 D:\Github\AGPTProject1\AGPTProject1\JetEngine\JetEngine.cpp;D:\Github\AGPTProject1\AGPTProject1\JetEngine\x64\Debug\JetEngine.obj
+D:\Github\AGPTProject1\AGPTProject1\JetEngine\Missile.cpp;D:\Github\AGPTProject1\AGPTProject1\JetEngine\x64\Debug\Missile.obj
+D:\Github\AGPTProject1\AGPTProject1\JetEngine\ParallaxLayer.cpp;D:\Github\AGPTProject1\AGPTProject1\JetEngine\x64\Debug\ParallaxLayer.obj
 D:\Github\AGPTProject1\AGPTProject1\JetEngine\Physics.cpp;D:\Github\AGPTProject1\AGPTProject1\JetEngine\x64\Debug\Physics.obj
 D:\Github\AGPTProject1\AGPTProject1\JetEngine\Renderer.cpp;D:\Github\AGPTProject1\AGPTProject1\JetEngine\x64\Debug\Renderer.obj

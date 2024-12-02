@@ -1,7 +1,7 @@
 #include "InputManager.h"
 #include <iostream>
 
-InputManager::InputManager() : gamepad(nullptr) {}
+InputManager::InputManager() : gamepad(nullptr), deadZone(0.2f) {} 
 
 InputManager::~InputManager() {
     if (gamepad) {
@@ -16,8 +16,20 @@ bool InputManager::ProcessInput(bool& isRunning) {
             isRunning = false;
         }
     }
-    if (gamepad == nullptr && SDL_NumJoysticks() > 0) {
-        gamepad = SDL_GameControllerOpen(0);
+
+    
+    int numJoysticks = SDL_NumJoysticks();
+  
+    if (gamepad == nullptr && numJoysticks > 0) {
+        if (SDL_IsGameController(0)) {
+            gamepad = SDL_GameControllerOpen(0);
+            if (gamepad) {
+                std::cout << "Gamepad connected: " << SDL_GameControllerName(gamepad) << std::endl;
+            }
+            else {
+                std::cerr << "SDL_GameControllerOpen Error: " << SDL_GetError() << std::endl;
+            }
+        }
     }
 
     return isRunning;
@@ -41,6 +53,9 @@ bool InputManager::IsButtonPressed(int button) const {
 float InputManager::GetAxis(int axis) const {
     if (gamepad) {
         float axisValue = SDL_GameControllerGetAxis(gamepad, static_cast<SDL_GameControllerAxis>(axis)) / 32767.0f;
+        if (std::abs(axisValue) < deadZone) {
+            axisValue = 0.0f;
+        }
         return axisValue;
     }
     return 0.0f;

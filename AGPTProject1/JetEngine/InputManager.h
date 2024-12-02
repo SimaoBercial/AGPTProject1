@@ -11,7 +11,6 @@ public:
     bool ProcessInput(bool& isRunning);
     const Uint8* GetKeyState() const;
 
-    // Gamepad input functions
     bool IsGamepadConnected() const;
     bool IsButtonPressed(int button) const;
     float GetAxis(int axis) const;
@@ -19,6 +18,7 @@ public:
 private:
     SDL_Event event;
     SDL_GameController* gamepad;
+    float deadZone;
 };
 
 #endif
