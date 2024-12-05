@@ -3,7 +3,7 @@
 
 
 Physics::Physics() {
-	worldDef.gravity = {0.0f, -10.0f};
+	worldDef.gravity = {0.0f, 0.0f};
 	timeStep = 1.0f / 60.0f;
 	subStepCount = 4;
 }

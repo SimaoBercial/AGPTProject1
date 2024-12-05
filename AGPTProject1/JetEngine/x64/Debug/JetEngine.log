@@ -1,2 +1,5 @@
 ﻿  JetEngine.cpp
-  JetEngine.vcxproj -> C:\Users\Sauchixa\Desktop\AGPTProject1\AGPTProject1\x64\Debug\JetEngine.lib
+D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\GameObject.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  (compiling source file 'JetEngine.cpp')
+  
+  JetEngine.vcxproj -> D:\Desktop\AGPTProject1\AGPTProject1\x64\Debug\JetEngine.lib
