@@ -7,31 +7,31 @@
 
 class BackgroundLayer {
 public:
-    SDL_Texture* texture;
-    SDL_Rect rect;
-    float scrollSpeed;
-    float offsetY;
+	SDL_Texture* texture;
+	SDL_Rect rect;
+	float scrollSpeed;
+	float offsetY;
 
-    BackgroundLayer(SDL_Texture* tex, int width, int height, float speed)
-        : texture(tex), scrollSpeed(speed), offsetY(0.0f) {
-        rect = { 0, 0, width, height }; 
-    }
+	BackgroundLayer(SDL_Texture* tex, int width, int height, float speed)
+		: texture(tex), scrollSpeed(speed), offsetY(0.0f) {
+		rect = { 0, 0, width, height };
+	}
 
-    void Update(float deltaTime) {
-        offsetY += scrollSpeed * deltaTime;
+	void Update(float deltaTime) {
+		offsetY -= scrollSpeed * deltaTime;
 
-        if (offsetY >= rect.h) {
-            offsetY = 0.0f;
-        }
-    }
+		if (offsetY <= -rect.h) {
+			offsetY = rect.h;
+		}
+	}
 
-    void Render(Renderer* renderer) {
-        SDL_Rect renderRect1 = { 0, static_cast<int>(-offsetY), rect.w, rect.h }; 
-        SDL_Rect renderRect2 = { 0, static_cast<int>(rect.h - offsetY), rect.w, rect.h };
+	void Render(Renderer* renderer) {
+		SDL_Rect renderRect1 = { 0, static_cast<int>(-offsetY), rect.w, rect.h };
+		SDL_Rect renderRect2 = { 0, static_cast<int>(offsetY), rect.w, rect.h };
 
-        renderer->Render(texture, &renderRect1, &renderRect1); 
-        renderer->Render(texture, &renderRect2, &renderRect2); 
-    }
+		renderer->Render(texture, &renderRect1, &renderRect1);
+		renderer->Render(texture, &renderRect2, &renderRect2);
+	}
 };
 
 class Background {

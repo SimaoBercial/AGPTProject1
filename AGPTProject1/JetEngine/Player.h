@@ -18,10 +18,13 @@ public:
 private:
     SDL_Texture* texture;
     SDL_Rect position;
-    SDL_Rect spriteRect; 
+    SDL_Rect spriteRectPlayer; 
     float moveSpeed;
     int currentFrame;     
-    float frameTime;      
+    float frameTime;     
+    float movementMagnitude;
+    float posX;
+    float posY;
     const int numFrames;  
     const int frameWidth; 
     const int frameHeight; 

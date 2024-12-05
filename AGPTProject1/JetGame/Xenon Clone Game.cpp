@@ -12,19 +12,15 @@ int main(int argc, char** argv) {
 
     SDL_Texture* playerTexture = engine.GetRenderer()->LoadTexture("graphics/Ship1.bmp");
     SDL_Texture* backgroundLayer1Texture = engine.GetRenderer()->LoadTexture("graphics/galaxy2.bmp");
-    SDL_Texture* backgroundLayer2Texture = engine.GetRenderer()->LoadTexture("graphics/galaxy2.bmp"); 
-    SDL_Texture* missileTexture = engine.GetRenderer()->LoadTexture("graphics/hmissile.bmp");
+    SDL_Texture* backgroundLayer2Texture = engine.GetRenderer()->LoadTexture("graphics/clone.bmp"); 
+    SDL_Texture* missileTexture = engine.GetRenderer()->LoadTexture("graphics/missile.bmp");
     SDL_Texture* enemyTexture = engine.GetRenderer()->LoadTexture("graphics/drone.bmp");
 
     Player player;
     player.Initialize(playerTexture, missileTexture, { 320 - 16, 400, 64, 64 });
 
     Background background;
-    background.Initialize(
-        { backgroundLayer1Texture, backgroundLayer2Texture },  
-        { 100.0f, 100.0f }, 
-        640, 480
-    );
+    background.Initialize({ backgroundLayer1Texture, backgroundLayer2Texture },{ 0.0f, 20.0f }, 640, 480 );
 
 
     std::vector<Enemy> enemies;

@@ -19,6 +19,11 @@ public:
 private:
     SDL_Texture* texture;
     SDL_Rect position;
+    SDL_Rect spriteRectMissile;
+    int frameWidth;
+    int frameHeight;
+	
+
     float speed;
 };
 

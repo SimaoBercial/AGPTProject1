@@ -1,13 +1,16 @@
-/*
 #include "Physics.h"
+#include "box2d/box2d.h"
 
-b2World* Physics::CreateWorld() {
-    return new b2World(b2Vec2(0.0f, -9.8f)); // Gravity in -y
+
+Physics::Physics() {
+	worldDef.gravity = {0.0f, -10.0f};
+	timeStep = 1.0f / 60.0f;
+	subStepCount = 4;
 }
 
-void Physics::Update(b2World* world, float timeStep) {
-    const int32 velocityIterations = 6;
-    const int32 positionIterations = 2;
-    world->Step(timeStep, velocityIterations, positionIterations);
+Physics::~Physics(){
 }
-*/
+
+void Physics::Box2DDebug() {
+	
+}

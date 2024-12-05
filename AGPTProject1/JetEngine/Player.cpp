@@ -1,6 +1,7 @@
 #include "Player.h"
 #include "Renderer.h"
 #include "Missile.h"
+#include <iostream>
 
 Player::Player()
     : texture(nullptr),
@@ -11,11 +12,12 @@ Player::Player()
     frameWidth(64),
     frameHeight(64),
     movingLeft(false),
-    movingRight(false), 
+    movingRight(false),
     missileTexture(nullptr),
     missileCooldown(0.2f),
-    missileTimer(0.0f) {
-}
+    missileTimer(0.0f),
+    movementMagnitude(0.0f)
+{}
 
 Player::~Player() {}
 
@@ -23,7 +25,9 @@ void Player::Initialize(SDL_Texture* playerTexture, SDL_Texture* missileTexture,
     texture = playerTexture;
     this->missileTexture = missileTexture;
     position = startPosition;
-    spriteRect = { 0, 0, frameWidth, frameHeight };
+	spriteRectPlayer = { 0, 0, frameWidth, frameHeight };
+    posX = startPosition.x;
+    posY = startPosition.y;
 }
 
 void Player::HandleInput(const Uint8* keyState, float deltaTime, InputManager* inputManager) {
@@ -31,7 +35,7 @@ void Player::HandleInput(const Uint8* keyState, float deltaTime, InputManager* i
     float moveY = 0.0f;
 
     if (keyState[SDL_SCANCODE_D]) {
-        moveX += 1.0f;
+        moveX += 1.0f ;
         movingLeft = false;
         movingRight = true;
     }
@@ -64,8 +68,20 @@ void Player::HandleInput(const Uint8* keyState, float deltaTime, InputManager* i
         }
     }
 
-    position.x += moveX * moveSpeed * deltaTime;
-    position.y += moveY * moveSpeed * deltaTime;
+    movementMagnitude  = std::sqrt(moveX * moveX + moveY * moveY); //normalize diagonal movement
+	if (movementMagnitude > 0.0f) {
+		moveX /= movementMagnitude;
+		moveY /= movementMagnitude;
+	}
+    //calculates the movement speed with precision, using float point precision
+    posX += moveX * moveSpeed * deltaTime; 
+    posY += moveY * moveSpeed * deltaTime;
+
+    //takes the movement precision value, then rounds up, 
+    //converting and rounding the float to a integer, 
+    //for the rendering of SDL_Rect
+    position.x = static_cast<int>(posX);
+    position.y = static_cast<int>(posY);    
 
     const int screenWidth = 640; 
     const int screenHeight = 480; 
@@ -78,7 +94,7 @@ void Player::HandleInput(const Uint8* keyState, float deltaTime, InputManager* i
         movingLeft = false;
         movingRight = false;
     }
-
+    
     HandleShooting(inputManager, deltaTime);
 }
 
@@ -115,7 +131,7 @@ void Player::UpdateAnimation(float deltaTime) {
     if (!movingLeft && !movingRight) {
         currentFrame = 3;
         frameTime = 0.0f;
-        spriteRect.x = currentFrame * frameWidth;
+        spriteRectPlayer.x = currentFrame * frameWidth;
         return;
     }
 
@@ -136,11 +152,11 @@ void Player::UpdateAnimation(float deltaTime) {
             }
         }
     }
-    spriteRect.x = currentFrame * frameWidth;
+    spriteRectPlayer.x = currentFrame * frameWidth;
 }
 
 void Player::Render(Renderer* renderer) {
-    renderer->Render(texture, &spriteRect, &position);
+    renderer->Render(texture, &spriteRectPlayer, &position);
 
     for (auto& missile : missiles) {
         missile.Render();

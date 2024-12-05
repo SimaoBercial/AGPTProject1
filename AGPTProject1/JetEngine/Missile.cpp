@@ -1,6 +1,11 @@
 #include "Missile.h"
 
-Missile::Missile() : texture(nullptr), speed(500.0f) {}
+Missile::Missile()
+    : texture(nullptr),
+    speed(500.0f),
+    frameWidth(16),
+    frameHeight(16)
+{}
 
 Missile::~Missile() {}
 
@@ -8,6 +13,7 @@ void Missile::Initialize(SDL_Texture* texture, SDL_Rect startPosition, float spe
     this->texture = texture;
     this->position = startPosition;
     this->speed = speed;
+    spriteRectMissile = { 0, 0, frameWidth, frameHeight };
     this->renderer = SDL_GetRenderer(SDL_GetWindowFromID(1));
 }
 
@@ -18,7 +24,7 @@ void Missile::Update(float deltaTime) {
 
 void Missile::Render() {
     if (renderer && texture) {
-        SDL_RenderCopy(renderer, texture, nullptr, &position);
+        SDL_RenderCopy(renderer, texture, &spriteRectMissile, &position);
     }
 }
 

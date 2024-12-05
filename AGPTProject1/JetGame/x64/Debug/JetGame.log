@@ -1,4 +1,9 @@
-﻿  Player.cpp
-C:\Users\Sauchixa\Desktop\AGPTProject1\AGPTProject1\JetEngine\Player.cpp(67,37): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
-C:\Users\Sauchixa\Desktop\AGPTProject1\AGPTProject1\JetEngine\Player.cpp(68,37): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+﻿  Background.cpp
+C:\Users\Sauchixa\Desktop\AGPTProject1\AGPTProject1\JetGame\Background.h(24,18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Background.cpp')
+  
+  Xenon Clone Game.cpp
+C:\Users\Sauchixa\Desktop\AGPTProject1\AGPTProject1\JetGame\Background.h(24,18): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  (compiling source file 'Xenon%20Clone%20Game.cpp')
+  
   JetGame.vcxproj -> C:\Users\Sauchixa\Desktop\AGPTProject1\AGPTProject1\x64\Debug\Xenon Clone Game.exe
