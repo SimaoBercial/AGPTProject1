@@ -11,7 +11,7 @@ public:
     ~Missile();
 
     void Initialize(SDL_Texture* texture, SDL_Rect startPosition, float speed);
-    void Update(float deltaTime) override;
+    void Update(float deltaTime, int textureWidth, int textureHeight, int frameWidth, int frameHeigth) override;
     void Render() override;
     SDL_Rect GetBoundingBox() const override;
     bool IsOffScreen() const;

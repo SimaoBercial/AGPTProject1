@@ -18,7 +18,7 @@ void Missile::Initialize(SDL_Texture* texture, SDL_Rect startPosition, float spe
 }
 
 
-void Missile::Update(float deltaTime) {
+void Missile::Update(float deltaTime, int textureWidth, int textureHeight, int frameWidth, int frameHeigth) {
     position.y = static_cast<int>(position.y - speed * deltaTime);
 }
 

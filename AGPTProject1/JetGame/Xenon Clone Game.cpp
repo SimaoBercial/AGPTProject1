@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
     SDL_Texture* playerTexture = engine.GetRenderer()->LoadTexture("graphics/Ship1.bmp");
     SDL_Texture* backgroundTexture = engine.GetRenderer()->LoadTexture("graphics/galaxy2.bmp");
     SDL_Texture* parallaxTexture = engine.GetRenderer()->LoadTexture("graphics/Blocks.bmp"); 
-    SDL_Texture* missileTexture = engine.GetRenderer()->LoadTexture("graphics/missile.bmp");
+    SDL_Texture* missileTexture = engine.GetRenderer()->LoadTexture("graphics/missile.bmp"); //32x48 (16*16 frames in a 2x3 sprite)
 	SDL_Texture* rusherTexture = engine.GetRenderer()->LoadTexture("graphics/rusher.bmp"); //256x192  (64*32 frames in a 4x6 sprite )  
 	SDL_Texture* lonerTexture = engine.GetRenderer()->LoadTexture("graphics/LonerA.bmp"); // 256*256 (64x64 frames in a 4x4 sprite)  
 
@@ -26,17 +26,16 @@ int main(int argc, char** argv) {
 
     std::vector<Enemy> rushers; //move vertically
     for (int i = 0; i < 5; ++i) {
-        std::cout << i << std::endl;
         Enemy rusher;               
-        rusher.Initialize(rusherTexture, { 100 + i * 100, 0, 64, 32 }, 1.0f);//{ enemy x position, enemy y position, sprite Xsize for each frame, sprite Ysize for each frame}
+        rusher.Initialize(rusherTexture, { 100 + i * 100, 10, 64, 32 }, 1.0f, 64, 32);//{ enemy x position, enemy y position, sprite Xsize for each frame, sprite Ysize for each frame}
         rushers.push_back(rusher);
     }
 
+
 	std::vector<Enemy> loners; //move horizontally
 	for (int i = 0; i < 5; ++i) {
-		std::cout << i << std::endl;
 		Enemy loner;
-		loner.Initialize(lonerTexture, { 0 + i * 100, 50, 64, 64 }, 1.0f);//{ enemy x position, enemy y position, sprite Xsize for each frame, sprite Ysize for each frame}
+		loner.Initialize(lonerTexture, { 0 + i * 100, 50, 64, 64 }, 1.0f, 64, 64);//{ enemy x position, enemy y position, sprite Xsize for each frame, sprite Ysize for each frame}
 		loners.push_back(loner);
 	}
 
@@ -53,14 +52,16 @@ int main(int argc, char** argv) {
         player.Update(deltaTime);
 
         for (auto& enemy : rushers) {    //256x192  (64*32 frames in a 4x6 sprite )
-            enemy.Update(deltaTime, 256, 192, 4, 6);
+			enemy.SetEnemy(false, true);
+			enemy.Update(deltaTime, 256, 192, 64, 32);
         }
 		for (auto& enemy : loners) {     // 256*256 (64x64 frames in a 4x4 sprite) 
-            enemy.Update(deltaTime, 256, 256, 4, 4);
+			enemy.SetEnemy(true, false);
+			enemy.Update(deltaTime, 256, 256, 64, 64);
 		}
 
-        for (auto& missile : missiles) {
-            missile.Update(deltaTime);
+        for (auto& missile : missiles) { //32x48 (16*16 frames in a 2x3 sprite)
+            missile.Update(deltaTime, 32, 48, 16, 16);
         }
 
         background.Update(deltaTime);

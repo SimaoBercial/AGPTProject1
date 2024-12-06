@@ -10,9 +10,10 @@ public:
     Enemy();
     ~Enemy();
 
-    void Initialize(SDL_Texture* texture, SDL_Rect startPosition, float speed);
+    void Initialize(SDL_Texture* texture, SDL_Rect startPosition, float speed, int frameWidth, int frameHeigth);
     void Update(float deltaTime, int textureWidth, int textureHeight, int frameWidth, int frameHeigth) override;
     void Render() override;
+    void SetEnemy(bool isLoner, bool isRusher);
 
     SDL_Rect GetBoundingBox() const;
 
@@ -21,7 +22,10 @@ private:
     SDL_Texture* texture;
     SDL_Rect position;
     SDL_Rect frameRect; //the frame the sprite is at
+    int frameTime;
     float speed;
+    bool isLoner;
+    bool isRusher;
 };
 
 #endif

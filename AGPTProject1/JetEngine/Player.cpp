@@ -117,7 +117,7 @@ void Player::Update(float deltaTime) {
     UpdateAnimation(deltaTime);
 
     for (auto it = missiles.begin(); it != missiles.end();) {
-        it->Update(deltaTime);
+        it->Update(deltaTime, 32, 48, 16, 16);
         if (it->IsOffScreen()) {
             it = missiles.erase(it); 
         }
