@@ -13,7 +13,7 @@ bool JetEngine::Initialize(const std::string& windowTitle, int width, int height
         std::cerr << "SDL_Init Error: " << SDL_GetError() << std::endl;
         return false;
     }
-
+    
     window = SDL_CreateWindow(windowTitle.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, SDL_WINDOW_SHOWN);
     if (!window) {
         std::cerr << "SDL_CreateWindow Error: " << SDL_GetError() << std::endl;

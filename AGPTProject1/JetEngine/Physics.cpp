@@ -9,8 +9,7 @@ Physics::Physics() {
 }
 
 Physics::~Physics(){
+	b2DestroyWorld(worldId);
 }
 
-void Physics::Box2DDebug() {
-	
-}
+

@@ -25,7 +25,8 @@ void Background::Initialize(SDL_Texture& backgroundTexture, SDL_Texture& paralla
 void Background::Update(float deltaTime)
 {
 	parallax.y += scrollSpeed ;
-	if (parallax.y >= screenHeight) {
+	if (parallax.y >= screenHeight) 
+	{
 		parallax.y = -screenHeight;
 	}
 }

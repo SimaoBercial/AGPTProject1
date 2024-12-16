@@ -1,5 +1,3 @@
-﻿  Enemy.cpp
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\GameObject.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file '../JetEngine/Enemy.cpp')
-  
-  JetGame.vcxproj -> D:\Desktop\AGPTProject1\AGPTProject1\x64\Debug\Xenon Clone Game.exe
+﻿  Background.cpp
+C:\Users\Sauchixa\Desktop\AGPTProject1\AGPTProject1\JetGame\Background.cpp(27,16): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+  JetGame.vcxproj -> C:\Users\Sauchixa\Desktop\AGPTProject1\AGPTProject1\x64\Debug\Xenon Clone Game.exe

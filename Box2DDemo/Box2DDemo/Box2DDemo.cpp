@@ -21,7 +21,7 @@ int main()
     // The body is also added to the world.
     b2BodyId groundId = b2CreateBody(worldId, &groundBodyDef);
 
-    b2Polygon groundBox = b2MakeBox(50.0f, 10.0f);
+    b2Polygon groundBox = b2MakeBox(50.0f, 10.0f); 
 
     b2ShapeDef groundShapeDef = b2DefaultShapeDef();
     b2CreatePolygonShape(groundId, &groundShapeDef, &groundBox);
