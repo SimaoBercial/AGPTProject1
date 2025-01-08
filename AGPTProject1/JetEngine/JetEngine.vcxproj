@@ -138,16 +138,20 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="InputManager.cpp" />
     <ClCompile Include="JetEngine.cpp" />
+    <ClCompile Include="Pawn.cpp" />
     <ClCompile Include="Physics.cpp" />
     <ClCompile Include="Renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="JetEngine.h" />
+    <ClInclude Include="Pawn.h" />
     <ClInclude Include="Physics.h" />
     <ClInclude Include="Renderer.h" />
   </ItemGroup>

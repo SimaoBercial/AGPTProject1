@@ -161,6 +161,4 @@ void Player::Render(Renderer* renderer) {
     for (auto& missile : missiles) {
         missile.Render();
     }
-
-
 }

@@ -40,3 +40,4 @@ private:
     void UpdateAnimation(float deltaTime);
     void HandleShooting(InputManager* inputManager, float deltaTime);
 };
+

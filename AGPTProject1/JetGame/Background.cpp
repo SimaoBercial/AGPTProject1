@@ -36,3 +36,12 @@ void Background::Render(Renderer* renderer)
 	renderer->Render(backgroundTexture, nullptr, &background);// called first, is in the first layer of background
 	renderer->Render(parallaxTexture, &spriteRect, &parallax);// called after, is in the second layer of the background
 }
+
+
+
+
+
+
+
+
+

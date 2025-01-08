@@ -135,6 +135,16 @@
     <ClCompile Include="..\JetEngine\Missile.cpp" />
     <ClCompile Include="..\JetEngine\Player.cpp" />
     <ClCompile Include="Background.cpp" />
+    <ClCompile Include="Companion.cpp" />
+    <ClCompile Include="Drone.cpp" />
+    <ClCompile Include="Enemies.cpp" />
+    <ClCompile Include="Hazards.cpp" />
+    <ClCompile Include="Loner.cpp" />
+    <ClCompile Include="MetalAsteroid.cpp" />
+    <ClCompile Include="Projectiles.cpp" />
+    <ClCompile Include="Rusher.cpp" />
+    <ClCompile Include="Spaceship.cpp" />
+    <ClCompile Include="StoneAsteroid.cpp" />
     <ClCompile Include="Xenon Clone Game.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)JetEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -144,6 +154,16 @@
     <ClInclude Include="..\JetEngine\Missile.h" />
     <ClInclude Include="..\JetEngine\Player.h" />
     <ClInclude Include="Background.h" />
+    <ClInclude Include="Companion.h" />
+    <ClInclude Include="Drone.h" />
+    <ClInclude Include="Enemies.h" />
+    <ClInclude Include="Hazards.h" />
+    <ClInclude Include="Loner.h" />
+    <ClInclude Include="MetalAsteroid.h" />
+    <ClInclude Include="Projectiles.h" />
+    <ClInclude Include="Rusher.h" />
+    <ClInclude Include="Spaceship.h" />
+    <ClInclude Include="StoneAsteroid.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

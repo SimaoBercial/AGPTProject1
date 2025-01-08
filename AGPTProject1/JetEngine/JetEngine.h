@@ -30,7 +30,7 @@ private:
     Renderer renderer;
     InputManager inputManager;
 
-    Player* player;
+    Player* pawn;
     std::vector<Missile> missiles;
     std::vector<Enemy> enemies;  // Store enemies in a vector
 };
