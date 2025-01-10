@@ -4,27 +4,21 @@
 #include "GameObject.h"
 #include "SDL.h"
 #include "Renderer.h"
+#include <iostream>
 
 class Missile : public GameObject {
 public:
-    Missile();
+    Missile(SDL_Texture* texture, SDL_Rect position);
     ~Missile();
 
-    void Initialize(SDL_Texture* texture, SDL_Rect startPosition, float speed);
-    void Update(float deltaTime, int textureWidth, int textureHeight, int frameWidth, int frameHeigth) override;
-    void Render() override;
+    void Update(float deltaTime) override;
+    void Render(Renderer* renderer) override;
     SDL_Rect GetBoundingBox() const override;
-    bool IsOffScreen() const;
+	bool IsOffScreen() const;
+
 
 private:
-    SDL_Texture* texture;
-    SDL_Rect position;
-    SDL_Rect spriteRectMissile;
-    int frameWidth;
-    int frameHeight;
-	
-
-    float speed;
+    int damage;
 };
 
 #endif

@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Pawn.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\Pawn.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Xenon Clone Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetGame\\Xenon Clone Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\JetEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\JetEngine.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\Animation.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,61 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 403,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d3750d8a-574b-4fb3-b7e2-aa8af40e8231}"
-            }
-          ]
-        },
-        {
-          "DockedWidth": 262,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Pawn.h",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Pawn.h",
-              "RelativeDocumentMoniker": "JetEngine\\Pawn.h",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Pawn.h",
-              "RelativeToolTip": "JetEngine\\Pawn.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-08T23:11:59.721Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "JetEngine.cpp",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\JetEngine.cpp",
-              "RelativeDocumentMoniker": "JetEngine\\JetEngine.cpp",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\JetEngine.cpp",
-              "RelativeToolTip": "JetEngine\\JetEngine.cpp",
+              "Title": "Renderer.h",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Renderer.h",
+              "RelativeDocumentMoniker": "JetEngine\\Renderer.h",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Renderer.h",
+              "RelativeToolTip": "JetEngine\\Renderer.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-08T23:11:19.992Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T00:57:50.896Z",
               "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 262,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Animation.h",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Animation.h",
-              "RelativeDocumentMoniker": "JetEngine\\Animation.h",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Animation.h",
-              "RelativeToolTip": "JetEngine\\Animation.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-08T22:02:08.389Z",
+              "DocumentIndex": 0,
+              "Title": "Xenon Clone Game.cpp",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Xenon Clone Game.cpp",
+              "RelativeDocumentMoniker": "JetGame\\Xenon Clone Game.cpp",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Xenon Clone Game.cpp",
+              "RelativeToolTip": "JetGame\\Xenon Clone Game.cpp",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAUwGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-09T17:49:43.43Z",
               "EditorCaption": ""
             }
           ]

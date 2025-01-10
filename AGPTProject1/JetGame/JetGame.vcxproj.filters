@@ -66,6 +66,12 @@
     <ClCompile Include="Background.cpp">
       <Filter>Source Files\Previous</Filter>
     </ClCompile>
+    <ClCompile Include="WeaponPowerUp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShieldPowerUp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Enemies.h">
@@ -110,8 +116,15 @@
     <ClInclude Include="Background.h">
       <Filter>Header Files\Previous</Filter>
     </ClInclude>
+    <ClInclude Include="ShieldPowerUp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponPowerUp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
 </Project>

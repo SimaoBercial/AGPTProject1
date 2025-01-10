@@ -1,10 +1,14 @@
 #ifndef ENEMIES_H
 #define ENEMIES_H
  
-class Enemies
-{
-	Enemies();
-	~Enemies();
+#include "GameObject.h"
+
+class Enemies : public GameObject{
+public:
+	virtual ~Enemies() {};
+
+protected:
+	int lifePoints;
 };
 
 #endif

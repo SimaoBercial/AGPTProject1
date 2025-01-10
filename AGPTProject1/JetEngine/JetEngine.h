@@ -4,7 +4,7 @@
 #include <string>
 #include "Renderer.h"
 #include "InputManager.h"
-#include "Player.h"
+#include "Pawn.h"
 #include "Missile.h"
 #include "Enemy.h"
 #include <vector>
@@ -29,10 +29,9 @@ private:
 
     Renderer renderer;
     InputManager inputManager;
+    
 
-    Player* pawn;
-    std::vector<Missile> missiles;
-    std::vector<Enemy> enemies;  // Store enemies in a vector
+   // std::vector<Enemy> enemies;  // Store enemies in a vector
 };
 
 #endif

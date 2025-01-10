@@ -2,18 +2,33 @@
 #define GAMEOBJECT_H
 
 #include "SDL.h"
-#include "Renderer.h";
+#include "Renderer.h"
 
 class GameObject {
 public:
-    virtual ~GameObject() = default;
+    virtual ~GameObject() {};
 
-    virtual void Update(float deltaTime, int textureWidth, int textureHeight, int frameWidth, int frameHeigth) = 0;
-    virtual void Render() = 0;
+    virtual void Update(float deltaTime) = 0;
+    virtual void Render(Renderer* renderer) = 0;
     virtual SDL_Rect GetBoundingBox() const = 0;
 
 protected:
-    SDL_Renderer* renderer = nullptr;
+    SDL_Texture* texture;
+    SDL_Rect position;
+    SDL_Rect spriteRectObject;
+	int frameWidth;
+    int frameHeight;
+	float frameTime;
+    int currentFrame;
+    int numFrames;
+    float moveSpeed;
+    float movementMagnitude;
+    float posX;
+    float posY;
+    float velocityX;
+    float velocityY;
+    int textureWidth;
+    int textureHeight;
 };
 
 #endif

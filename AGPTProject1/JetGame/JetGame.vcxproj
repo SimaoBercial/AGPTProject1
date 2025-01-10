@@ -143,8 +143,10 @@
     <ClCompile Include="MetalAsteroid.cpp" />
     <ClCompile Include="Projectiles.cpp" />
     <ClCompile Include="Rusher.cpp" />
+    <ClCompile Include="ShieldPowerUp.cpp" />
     <ClCompile Include="Spaceship.cpp" />
     <ClCompile Include="StoneAsteroid.cpp" />
+    <ClCompile Include="WeaponPowerUp.cpp" />
     <ClCompile Include="Xenon Clone Game.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)JetEngine;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -162,11 +164,14 @@
     <ClInclude Include="MetalAsteroid.h" />
     <ClInclude Include="Projectiles.h" />
     <ClInclude Include="Rusher.h" />
+    <ClInclude Include="ShieldPowerUp.h" />
     <ClInclude Include="Spaceship.h" />
     <ClInclude Include="StoneAsteroid.h" />
+    <ClInclude Include="WeaponPowerUp.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

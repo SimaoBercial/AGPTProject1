@@ -9,6 +9,7 @@ JetEngine::~JetEngine() {
 }
 
 bool JetEngine::Initialize(const std::string& windowTitle, int width, int height) {
+
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_JOYSTICK) != 0) {
         std::cerr << "SDL_Init Error: " << SDL_GetError() << std::endl;
         return false;

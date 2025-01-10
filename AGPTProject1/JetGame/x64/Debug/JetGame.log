@@ -1,11 +1,6 @@
-﻿  Player.cpp
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\GameObject.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file '../JetEngine/Player.cpp')
-  
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Player.cpp(29,25): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\Player.cpp(30,25): warning C4244: '=': conversion from 'const int' to 'float', possible loss of data
-  Xenon Clone Game.cpp
-D:\Desktop\AGPTProject1\AGPTProject1\JetEngine\GameObject.h(5,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-  (compiling source file 'Xenon%20Clone%20Game.cpp')
-  
+﻿  Spaceship.cpp
+D:\Desktop\AGPTProject1\AGPTProject1\JetGame\Spaceship.cpp(17,23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject1\JetGame\Spaceship.cpp(18,23): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject1\JetGame\Spaceship.cpp(34,22): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject1\JetGame\Spaceship.cpp(35,23): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
   JetGame.vcxproj -> D:\Desktop\AGPTProject1\AGPTProject1\x64\Debug\Xenon Clone Game.exe

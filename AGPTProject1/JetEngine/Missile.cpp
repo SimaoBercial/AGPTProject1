@@ -1,30 +1,38 @@
 #include "Missile.h"
 
-Missile::Missile()
-    : texture(nullptr),
-    speed(500.0f),
-    frameWidth(16),
-    frameHeight(16)
-{}
-
-Missile::~Missile() {}
-
-void Missile::Initialize(SDL_Texture* texture, SDL_Rect startPosition, float speed) {
+Missile::Missile(SDL_Texture* texture, SDL_Rect position): damage(1)
+{
     this->texture = texture;
-    this->position = startPosition;
-    this->speed = speed;
-    spriteRectMissile = { 0, 0, frameWidth, frameHeight };
-    this->renderer = SDL_GetRenderer(SDL_GetWindowFromID(1));
+    this->position = position;
+    this->posX = position.x;
+    this->posY = position.y;
+    this->textureWidth = textureWidth;
+    this->textureHeight = textureHeight;
+
+    this->frameWidth = 16;
+    this->frameHeight = 16;
+    this->frameTime = 0.0f;
+    this->currentFrame = 0;
+    this->numFrames = 6;
+
+    this->spriteRectObject = { 0, 0, frameWidth, frameHeight };
+
+    this->velocityX = 0.0f;
+    this->velocityY = 0.0f;
+    this->moveSpeed = 2.0f; //speed of the missile
 }
 
+Missile::~Missile() {
 
-void Missile::Update(float deltaTime, int textureWidth, int textureHeight, int frameWidth, int frameHeigth) {
-    position.y = static_cast<int>(position.y - speed * deltaTime);
 }
 
-void Missile::Render() {
+void Missile::Update(float deltaTime) {
+	position.y = static_cast<int>(position.y - moveSpeed);
+}
+
+void Missile::Render(Renderer* renderer) {
     if (renderer && texture) {
-        SDL_RenderCopy(renderer, texture, &spriteRectMissile, &position);
+        renderer->Render(texture, &spriteRectObject, &position);
     }
 }
 
