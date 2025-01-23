@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Sauchixa\\Desktop\\AGPTProject1\\Box2DDemo\\",
+  "WorkspaceRootPath": "D:\\Desktop\\AGPTProject1\\Box2DDemo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40AB1263-817B-4BA0-B268-6A06135F3DE9}|Box2DDemo\\Box2DDemo.vcxproj|C:\\Users\\Sauchixa\\Desktop\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{40AB1263-817B-4BA0-B268-6A06135F3DE9}|Box2DDemo\\Box2DDemo.vcxproj|D:\\Desktop\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{40AB1263-817B-4BA0-B268-6A06135F3DE9}|Box2DDemo\\Box2DDemo.vcxproj|solutionrelative:Box2DDemo\\Box2DDemo.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,33 +14,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d3750d8a-574b-4fb3-b7e2-aa8af40e8231}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{32a6260a-0121-4878-95e5-80d2f08ea4cb}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{8e5c1d1a-8a91-4406-aa56-5bf27c97d63c}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Box2DDemo.cpp",
-              "DocumentMoniker": "C:\\Users\\Sauchixa\\Desktop\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp",
               "RelativeDocumentMoniker": "Box2DDemo\\Box2DDemo.cpp",
-              "ToolTip": "C:\\Users\\Sauchixa\\Desktop\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\Box2DDemo\\Box2DDemo\\Box2DDemo.cpp",
               "RelativeToolTip": "Box2DDemo\\Box2DDemo.cpp",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAAACEAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAAAEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-11-04T10:09:38.865Z",
               "EditorCaption": ""

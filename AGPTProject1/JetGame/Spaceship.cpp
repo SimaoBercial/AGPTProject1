@@ -1,4 +1,5 @@
 #include "Spaceship.h"
+#include "box2d/box2d.h"
 
 
 Spaceship::Spaceship(SDL_Texture* texture, SDL_Rect position) : missileTimer(0.0f),
@@ -27,6 +28,11 @@ missiles{}
 
 	this->movingLeft = false;
 	this->movingRight = false;
+
+	//Create Rigid Body:
+
+	b2BodyDef bodyDef = b2DefaultBodyDef();
+
 }
 
 void Spaceship::GetScreenSize(float screenWidth, float screenHeight)

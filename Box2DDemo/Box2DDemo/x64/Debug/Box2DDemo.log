@@ -1,5 +1,5 @@
 ﻿  Box2DDemo.cpp
-C:\Users\Sauchixa\Desktop\AGPTProject1\Box2DDemo\Box2DDemo\Box2DDemo.cpp(57,16): warning C4477: 'printf' : format string '%4.2f' requires an argument of type 'double', but variadic argument 3 has type 'b2Rot'
+D:\Desktop\AGPTProject1\Box2DDemo\Box2DDemo\Box2DDemo.cpp(57,16): warning C4477: 'printf' : format string '%4.2f' requires an argument of type 'double', but variadic argument 3 has type 'b2Rot'
 box2DD.lib(geometry.obj) : warning LNK4099: PDB '' was not found with 'box2DD.lib(geometry.obj)' or at ''; linking object as if no debug info
 box2DD.lib(types.obj) : warning LNK4099: PDB '' was not found with 'box2DD.lib(types.obj)' or at ''; linking object as if no debug info
 box2DD.lib(world.obj) : warning LNK4099: PDB '' was not found with 'box2DD.lib(world.obj)' or at ''; linking object as if no debug info
@@ -34,4 +34,4 @@ box2DD.lib(weld_joint.obj) : warning LNK4099: PDB '' was not found with 'box2DD.
 box2DD.lib(wheel_joint.obj) : warning LNK4099: PDB '' was not found with 'box2DD.lib(wheel_joint.obj)' or at ''; linking object as if no debug info
 box2DD.lib(contact_solver.obj) : warning LNK4099: PDB '' was not found with 'box2DD.lib(contact_solver.obj)' or at ''; linking object as if no debug info
 LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
-  Box2DDemo.vcxproj -> C:\Users\Sauchixa\Desktop\AGPTProject1\Box2DDemo\x64\Debug\Box2DDemo.exe
+  Box2DDemo.vcxproj -> D:\Desktop\AGPTProject1\Box2DDemo\x64\Debug\Box2DDemo.exe

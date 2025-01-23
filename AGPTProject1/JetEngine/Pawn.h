@@ -4,6 +4,7 @@
 #include <SDL.h>
 #include "InputManager.h"
 #include "Renderer.h"
+#include "Physics.h"
 
 class Pawn {
 public:
@@ -11,7 +12,7 @@ public:
 
 	virtual void HandleInput(const Uint8* keyState, float deltaTime, InputManager* inputManager) = 0;
 	virtual void Update(float deltaTime) = 0;
-	virtual void Render(Renderer* renderer) = 0;;
+	virtual void Render(Renderer* renderer) = 0;
 
 protected:
 	SDL_Texture* texture;
@@ -30,6 +31,7 @@ protected:
 	float posY; //pass to render and collision
 	float velocityX; //speed on X
 	float velocityY; //speed on Y
+
 
 
 	bool movingLeft;

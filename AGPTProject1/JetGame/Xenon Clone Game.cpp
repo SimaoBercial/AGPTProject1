@@ -63,7 +63,6 @@ int main(int argc, char** argv) {
 
 
         for (auto& rusher : rushers) {    
-// 			enemy.SetEnemy(false, true);
  			rusher.Update(deltaTime);
         }
 		for (auto& loner : loners) {     
