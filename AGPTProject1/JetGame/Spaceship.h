@@ -15,6 +15,7 @@ public:
 	void HandleInput(const Uint8* keyState, float deltaTime, InputManager* inputManager) override;
 	void Update(float deltaTime) override;
 	void Render(Renderer* renderer) override;
+	void CreateRigidBody(Physics* physics) override;
 	void GetScreenSize(float screenWidth, float screenHeight);
 	void GetMissileTexture(SDL_Texture* missileTexture);
 

@@ -13,6 +13,7 @@ public:
 	virtual void HandleInput(const Uint8* keyState, float deltaTime, InputManager* inputManager) = 0;
 	virtual void Update(float deltaTime) = 0;
 	virtual void Render(Renderer* renderer) = 0;
+	virtual void CreateRigidBody(Physics* physics) = 0;
 
 protected:
 	SDL_Texture* texture;

@@ -1,5 +1,4 @@
 #include "Spaceship.h"
-#include "box2d/box2d.h"
 
 
 Spaceship::Spaceship(SDL_Texture* texture, SDL_Rect position) : missileTimer(0.0f),
@@ -31,7 +30,6 @@ missiles{}
 
 	//Create Rigid Body:
 
-	b2BodyDef bodyDef = b2DefaultBodyDef();
 
 }
 
@@ -192,6 +190,17 @@ void Spaceship::Render(Renderer* renderer)
 	}
 }
 
+
+void Spaceship::CreateRigidBody(Physics* physics)
+{
+	physics->CreateDynamicBody(posX, posY, false, 3, 1); 
+}
+
+/// <summary>
+/// do transforms on the rigid bodies
+/// apply creation of transforms on the rest 
+/// learn how to convert from pixels to meters or vice versa
+/// </summary>
 
 Spaceship::~Spaceship() {
 

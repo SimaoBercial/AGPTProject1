@@ -9,9 +9,8 @@ class Physics {
 public:
 	Physics();
 	~Physics();
-	void CreateStaticBody(float posX, float posY); // maybe instead of void have a b2BodyDef or something, idk
-	void CreateDynamicBody(float posX, float posY, bool isBullet);
-	void CreateShape(float density, bool hasSensorEvents);
+	void CreateStaticBody(float posX, float posY, float width, float height); 
+	void CreateDynamicBody(float posX, float posY, bool isBullet, float width, float height);
 
 private:
 	b2WorldDef worldDef = b2DefaultWorldDef();
