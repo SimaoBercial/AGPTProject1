@@ -15,6 +15,9 @@ public:
 	void Update(float deltaTime) override;
 	void Render(Renderer* renderer) override;
 	SDL_Rect GetBoundingBox() const override;
+	void CreateRigidBody(Physics* physics) override;
+
+
 };
 
 #endif

@@ -31,7 +31,7 @@ void Loner::Update(float deltaTime)
 {
 	frameTime += deltaTime;
 
-	// Only update the frame when enough time has passed
+	// updates animation frames
 	if (frameTime >= 0.1f) { // Adjust this value for desired frame speed
 		frameTime = 0.0f;
 
@@ -51,16 +51,24 @@ void Loner::Update(float deltaTime)
 		spriteRectObject.y = row * frameHeight;
 	}
 
-	// Update the Drone's position or other behaviors
-	position.x = static_cast<int>(posX + moveSpeed);
+	// Update the loner's position or other behaviors -- moves horizontally and fires at each 2 seconds
+	position.x = static_cast<int>(position.x + moveSpeed);
+
 }
 
 void Loner::Render(Renderer* renderer)
 {
-	renderer->Render(texture, &spriteRectObject, &position); //before was SDL_RenderCopy(renderer, texture, &frameRect, &position);
+	renderer->Render(texture, &spriteRectObject, &position); 
 }
 
 SDL_Rect Loner::GetBoundingBox() const {
 	return position;
+}
+
+void Loner::CreateRigidBody(Physics* physics)
+{
+	rigidbodyId = physics->CreateDynamicBody(posX, posY, false, 1, 1);
+	rigidbodyTransform = physics->GetRigidBodyTransform(rigidbodyId);
+	std::cout << " { " << rigidbodyTransform.p.x << " , " << rigidbodyTransform.p.y << " } " << std::endl;
 }
 

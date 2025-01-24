@@ -39,6 +39,9 @@ protected:
 	bool movingRight;
 	bool movingUp;
 	bool movingDown;
+
+	b2BodyId rigidbodyId;
+	b2Transform rigidbodyTransform;
 };
 
 #endif

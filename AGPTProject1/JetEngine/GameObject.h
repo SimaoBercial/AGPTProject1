@@ -3,6 +3,8 @@
 
 #include "SDL.h"
 #include "Renderer.h"
+#include "Physics.h"
+#include <iostream>
 
 class GameObject {
 public:
@@ -11,6 +13,8 @@ public:
     virtual void Update(float deltaTime) = 0;
     virtual void Render(Renderer* renderer) = 0;
     virtual SDL_Rect GetBoundingBox() const = 0;
+	virtual void CreateRigidBody(Physics* physics) = 0;
+
 
 protected:
     SDL_Texture* texture;
@@ -29,6 +33,9 @@ protected:
     float velocityY;
     int textureWidth;
     int textureHeight;
+
+	b2BodyId rigidbodyId;
+	b2Transform rigidbodyTransform;
 };
 
 #endif

@@ -12,7 +12,7 @@ Physics::~Physics(){
 	b2DestroyWorld(worldId);
 }
 
-void Physics::CreateStaticBody(float posX, float posY, float width, float height)
+b2BodyId Physics::CreateStaticBody(float posX, float posY, float width, float height)
 {
 	b2BodyDef bodyDef = b2DefaultBodyDef();
 	bodyDef.type = b2_staticBody;
@@ -24,9 +24,11 @@ void Physics::CreateStaticBody(float posX, float posY, float width, float height
 
 	b2ShapeDef shapeDef = b2DefaultShapeDef();
 	b2CreatePolygonShape(bodyId, &shapeDef, &dynamicBox);
+
+	return bodyId;
 }
 
-void Physics::CreateDynamicBody(float posX, float posY, bool isBullet, float width, float height)
+b2BodyId Physics::CreateDynamicBody(float posX, float posY, bool isBullet, float width, float height)
 {
 	b2BodyDef bodyDef = b2DefaultBodyDef();
 	bodyDef.type = b2_staticBody;
@@ -39,4 +41,14 @@ void Physics::CreateDynamicBody(float posX, float posY, bool isBullet, float wid
 
 	b2ShapeDef shapeDef = b2DefaultShapeDef();
 	b2CreatePolygonShape(bodyId, &shapeDef, &dynamicBox);
+
+	return bodyId;
+
 }
+
+b2Transform Physics::GetRigidBodyTransform(b2BodyId bodyId)
+{
+	return b2Body_GetTransform(bodyId);
+}
+
+

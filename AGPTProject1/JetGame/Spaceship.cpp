@@ -28,9 +28,7 @@ missiles{}
 	this->movingLeft = false;
 	this->movingRight = false;
 
-	//Create Rigid Body:
-
-
+	std::cout << posX << " , " << posY << std::endl;
 }
 
 void Spaceship::GetScreenSize(float screenWidth, float screenHeight)
@@ -131,7 +129,6 @@ void Spaceship::Update(float deltaTime)
 	for (auto it = missiles.begin(); it != missiles.end();) {
 		it->Update(deltaTime);
 		if (it->IsOffScreen()) {
-			std::cout << "debug" << std::endl;
 			it = missiles.erase(it);
 		}
 		else {
@@ -167,6 +164,8 @@ void Spaceship::UpdateAnimation(float deltaTime)
 		}
 	}
 	spriteRectPlayer.x = currentFrame * frameWidth;
+
+
 }
 
 void Spaceship::HandleShooting(InputManager* inputManager, float deltaTime) {
@@ -193,14 +192,12 @@ void Spaceship::Render(Renderer* renderer)
 
 void Spaceship::CreateRigidBody(Physics* physics)
 {
-	physics->CreateDynamicBody(posX, posY, false, 3, 1); 
+	rigidbodyId = physics->CreateDynamicBody(posX, posY, false, 3, 2);
+	rigidbodyTransform = physics->GetRigidBodyTransform(rigidbodyId);
+	std::cout << " { " << rigidbodyTransform.p.x << " , " << rigidbodyTransform.p.y << " } " << std::endl;
 }
 
-/// <summary>
-/// do transforms on the rigid bodies
-/// apply creation of transforms on the rest 
-/// learn how to convert from pixels to meters or vice versa
-/// </summary>
+
 
 Spaceship::~Spaceship() {
 

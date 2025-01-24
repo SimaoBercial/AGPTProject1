@@ -27,7 +27,7 @@ private:
 	float lifePoints;
 	SDL_Texture* missileTexture;
 	std::vector <Missile> missiles;
-
-
+	b2BodyId rigidbodyId;
+	b2Transform rigidbodyTransform;
 };
 #endif

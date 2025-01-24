@@ -21,6 +21,7 @@ public:
 
     Renderer* GetRenderer();
     InputManager* GetInputManager();
+    Physics* GetPhysicsEngine();
 
 private:
     SDL_Window* window;
@@ -29,9 +30,7 @@ private:
 
     Renderer renderer;
     InputManager inputManager;
-    
-
-   // std::vector<Enemy> enemies;  // Store enemies in a vector
+    Physics physics;
 };
 
 #endif

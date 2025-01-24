@@ -40,6 +40,13 @@ SDL_Rect Missile::GetBoundingBox() const {
     return position;
 }
 
+void Missile::CreateRigidBody(Physics* physics)
+{
+	rigidbodyId = physics->CreateDynamicBody(posX, posY, false, 1, 1);
+	rigidbodyTransform = physics->GetRigidBodyTransform(rigidbodyId);
+	std::cout << " { " << rigidbodyTransform.p.x << " , " << rigidbodyTransform.p.y << " } " << std::endl;
+}
+
 bool Missile::IsOffScreen() const {
     return position.y + position.h < 0;
 }

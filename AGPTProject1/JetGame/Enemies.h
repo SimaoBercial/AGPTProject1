@@ -9,6 +9,7 @@ public:
 
 protected:
 	int lifePoints;
+	
 };
 
 #endif

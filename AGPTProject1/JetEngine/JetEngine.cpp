@@ -53,3 +53,8 @@ Renderer* JetEngine::GetRenderer() {
 InputManager* JetEngine::GetInputManager() {
     return &inputManager;
 }
+
+Physics* JetEngine::GetPhysicsEngine()
+{
+    return &physics;
+}

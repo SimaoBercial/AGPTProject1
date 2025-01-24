@@ -32,23 +32,27 @@ int main(int argc, char** argv) {
 	Spaceship spaceship(spaceshipTexture, { 304, 400, 64, 64 }); //instantiates the spaceship/player class for the first time
 	spaceship.GetScreenSize(screenWidth, screenHeigth);
 	spaceship.GetMissileTexture(missileTexture);
+    spaceship.CreateRigidBody(engine.GetPhysicsEngine());
    
-    std::vector<Drone> drones; //Drones have a horizontal sinusoidal move and appear in packs (see reference video)
-    for (int i = 0; i < 5; ++i) {
-        Drone drone(droneTexture, { 100 + i * 100, 10, 32, 32 }, 256, 640);
+    std::vector<Drone> drones; //Drones have a vertical movement, showing horizontal sinusoidal move and appear in packs of 8(see reference video)
+    for (int i = 0; i < 8; ++i) {
+        Drone drone(droneTexture, { 100 , 10 + i * 32, 32, 32 }, 256, 640);
 		drones.push_back(drone);
+        drone.CreateRigidBody(engine.GetPhysicsEngine());
     }
 
 	std::vector<Loner> loners; //This enemy moves horizontally at a certain speed. The loner fires at each 2 second interval a projectile in the Spaceship direction
 	for (int i = 0; i < 5; ++i) {
         Loner loner(lonerTexture, { 0 + i * 100, 50, 64, 64 }, 256, 256);
-		loners.push_back(loner);   
+		loners.push_back(loner);
+        loner.CreateRigidBody(engine.GetPhysicsEngine());
 	}
 
 	std::vector<Rusher> rushers; //This enemy moves vertically at a certain speed
 	for (int i = 0; i < 5; ++i) {
 		Rusher rusher(rusherTexture, { 0 + i * 100, 150, 64, 32 }, 256, 192);
 		rushers.push_back(rusher);
+        rusher.CreateRigidBody(engine.GetPhysicsEngine());
 	}
 
     bool isRunning = true;

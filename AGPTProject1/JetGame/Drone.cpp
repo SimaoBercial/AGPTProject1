@@ -31,7 +31,7 @@ void Drone::Update(float deltaTime)
 {
 	frameTime += deltaTime;
 
-	// Only update the frame when enough time has passed
+	// updates animation frames
 	if (frameTime >= 0.1f) { // Adjust this value for desired frame speed
 		frameTime = 0.0f;
 
@@ -51,15 +51,24 @@ void Drone::Update(float deltaTime)
 		spriteRectObject.y = row * frameHeight;
 	}
 
-	// Update the Drone's position or other behaviors
-	position.x = static_cast<int>(posX + moveSpeed);
+	// Update the Drone's position or other behaviors - moves vertically, in a horizontally sinusoidal way and appears in packs
+	position.y = static_cast<int>(position.y + moveSpeed);
+	position.x = static_cast<int>(100+ 30 * sin(position.y * 0.03));
+
 }
 
 void Drone::Render(Renderer* renderer)
 {
-	renderer->Render(texture, &spriteRectObject, &position); //before was SDL_RenderCopy(renderer, texture, &frameRect, &position);
+	renderer->Render(texture, &spriteRectObject, &position); 
 }
 
 SDL_Rect Drone::GetBoundingBox() const {
 	return position;
+}
+
+void Drone::CreateRigidBody(Physics* physics)
+{
+	rigidbodyId = physics->CreateDynamicBody(posX, posY, false, 1, 1);
+	rigidbodyTransform = physics->GetRigidBodyTransform(rigidbodyId);
+	std::cout << " { " << rigidbodyTransform.p.x << " , " << rigidbodyTransform.p.y << " } " << std::endl;
 }
