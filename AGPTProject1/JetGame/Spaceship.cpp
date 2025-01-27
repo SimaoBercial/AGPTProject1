@@ -1,11 +1,20 @@
 #include "Spaceship.h"
 
 
-Spaceship::Spaceship(SDL_Texture* texture, SDL_Rect position) : missileTimer(0.0f),
+Spaceship::Spaceship(SDL_Texture* texture, SDL_Rect position) : 
+missileTimer(0.0f),
 missileCooldown(0.2f),
-lifePoints(2),
+lifePoints(100),
+maxWeaponPowerUp(2),
+weaponPowerUp(0),
+companionsNumber(0),
+maxCompanionsNumber(2),
+companionTexture(nullptr),
 missileTexture(nullptr),
-missiles{}
+rigidbodyId(b2_nullBodyId),
+rigidbodyTransform(b2Transform_identity),
+missiles{},
+companions{}
 { 
 	this->texture = texture;
 	this->position = position; //start position of the sprite, on the screen
@@ -27,44 +36,83 @@ missiles{}
 
 	this->movingLeft = false;
 	this->movingRight = false;
-
-	std::cout << posX << " , " << posY << std::endl;
+	this->movingUp = false;
+	this->movingDown = false;
 }
 
 void Spaceship::GetScreenSize(float screenWidth, float screenHeight)
 {
 	this->screenWidth = screenWidth;
 	this->screenHeight = screenHeight;
+	for (auto& companion : companions) {
+		companion.screenWidth = screenWidth;
+		companion.screenHeight = screenHeight;
+	}
 }
 
-void Spaceship::GetMissileTexture(SDL_Texture* missileTexture) {
+void Spaceship::StoreMissileTexture(SDL_Texture* missileTexture) {
 	this->missileTexture = missileTexture;
+}
+
+void Spaceship::StoreCompanionTexture(SDL_Texture* companionTexture) {
+	this->companionTexture = companionTexture;
 }
 
 void Spaceship::HandleInput(const Uint8* keyState, float deltaTime, InputManager* inputManager)
 {
 	float velocityX = 0.0f;
 	float velocityY = 0.0f;
+	
+	for (auto& companion : companions) {
+		companion.velocityX = 0.0f;
+		companion.velocityY = 0.0f;
+
+	}
 
 	if (keyState[SDL_SCANCODE_D]) {
 		velocityX += 1.0f; //adds 1 to the X axis, then sped up with moveSpeed, updating the pos.X and passing it to the renderer.
 		movingLeft = false;
 		movingRight = true;
+		for (auto& companion : companions) {
+			companion.velocityX += 1.0f;
+			companion.movingLeft = false;
+			companion.movingRight = true;
+		}
 	}
 	if (keyState[SDL_SCANCODE_A]) {
 		velocityX -= 1.0f; //subtracts 1 to the X axis, then sped up with moveSpeed, updating the pos.X and passing it to the renderer.
 		movingLeft = true;
 		movingRight = false;
+		for (auto& companion : companions) {
+			companion.velocityX -= 1.0f;
+			companion.movingLeft = true;
+			companion.movingRight = false;
+		}
 	}
 	if (keyState[SDL_SCANCODE_W]) {
 		velocityY -= 1.0f; //adds 1 to the Y axis, then sped up with moveSpeed, updating the pos.Y and passing it to the renderer.
 		movingUp = true;
 		movingDown = false;
+		for (auto& companion : companions) {
+			companion.velocityY -= 1.0f;
+			companion.movingUp = true;
+			companion.movingDown = false;;
+		}
 	}
 	if (keyState[SDL_SCANCODE_S]) {
 		velocityY += 1.0f; //subtracts 1 to the Y axis, then sped up with moveSpeed, updating the pos.Y and passing it to the renderer.
 		movingUp = false;
 		movingDown = true;
+		for (auto& companion : companions) {
+			companion.velocityY += 1.0f;
+			companion.movingUp = false;
+			companion.movingDown = true;
+		}
+	}
+
+	//DEBUGS!/////////////////////
+	if (keyState[SDL_SCANCODE_E]) {
+		SpawnCompanion();
 	}
 
 	if (inputManager->IsGamepadConnected()) {
@@ -73,14 +121,26 @@ void Spaceship::HandleInput(const Uint8* keyState, float deltaTime, InputManager
 
 		velocityX += axisX;
 		velocityY += axisY;
+		for (auto& companion : companions) {
+			companion.velocityX = axisX;
+			companion.velocityY = axisY;
+		}
 
 		if (axisX > 0.1f) {
 			movingLeft = false;
 			movingRight = true;
+			for (auto& companion : companions) {
+				companion.movingLeft = false;;
+				companion.movingRight = true;;
+			}
 		}
 		else if (axisX < -0.1f) {
 			movingLeft = true;
 			movingRight = false;
+			for (auto& companion : companions) {
+				companion.movingLeft = true;;
+				companion.movingRight = false;;
+			}
 		}
 		if (axisY > 0.1f) {
 			movingUp = false;
@@ -118,13 +178,20 @@ void Spaceship::HandleInput(const Uint8* keyState, float deltaTime, InputManager
 		movingUp = false;
 		movingDown = false;
 	}
-
+	for (auto& companion : companions) {
+		
+		companion.Movement(deltaTime);
+	}
 	HandleShooting(inputManager, deltaTime);
 }
 
 void Spaceship::Update(float deltaTime) 
 {
 	UpdateAnimation(deltaTime);
+
+	for (auto& companion : companions) {
+		companion.Update(deltaTime);
+	}
 
 	for (auto it = missiles.begin(); it != missiles.end();) {
 		it->Update(deltaTime);
@@ -135,6 +202,8 @@ void Spaceship::Update(float deltaTime)
 			++it;
 		}
 	}
+
+	//collisions check
 }
 
 void Spaceship::UpdateAnimation(float deltaTime)
@@ -164,8 +233,6 @@ void Spaceship::UpdateAnimation(float deltaTime)
 		}
 	}
 	spriteRectPlayer.x = currentFrame * frameWidth;
-
-
 }
 
 void Spaceship::HandleShooting(InputManager* inputManager, float deltaTime) {
@@ -175,7 +242,11 @@ void Spaceship::HandleShooting(InputManager* inputManager, float deltaTime) {
 	bool shootButton = inputManager->IsButtonPressed(SDL_CONTROLLER_BUTTON_A);
 
 	if ((shootKey || shootButton) && missileTimer <= 0.0f) {
-		Missile missile(missileTexture, {(position.x + position.w / 2) - 8, (position.y - 16), 16, 16 });
+	
+		Missile missile(missileTexture, { (position.x + position.w / 2) - 8, (position.y - 16), 16, 16}, weaponPowerUp);
+		for (auto& companion : companions) {
+			companion.ShootMissile(missileTexture);
+	}
 		missiles.push_back(missile);
 		missileTimer = missileCooldown;
 	}
@@ -187,17 +258,47 @@ void Spaceship::Render(Renderer* renderer)
 	for (auto& missile : missiles) {
 		missile.Render(renderer);
 	}
+	for (auto& companion : companions) {
+		companion.Render(renderer);
+	}
 }
-
 
 void Spaceship::CreateRigidBody(Physics* physics)
 {
 	rigidbodyId = physics->CreateDynamicBody(posX, posY, false, 3, 2);
 	rigidbodyTransform = physics->GetRigidBodyTransform(rigidbodyId);
-	std::cout << " { " << rigidbodyTransform.p.x << " , " << rigidbodyTransform.p.y << " } " << std::endl;
+	std::cout << " { " << rigidbodyTransform.p.x << " , " << rigidbodyTransform.p.y << " } " << std::endl; //DEBUG!
 }
 
+void Spaceship::WeaponPowerUp() {
+	if (weaponPowerUp != maxWeaponPowerUp) { weaponPowerUp++; }
+	else(weaponPowerUp == maxWeaponPowerUp);
+}
 
+void Spaceship::ShieldPowerUp()
+{
+
+}
+
+void Spaceship::SpawnCompanion() {
+	if (companionsNumber == 0) {
+		Companion companion(companionTexture, { position.x - 64, position.y , 32, 32 }, 32, 32);
+		companions.push_back(companion);
+		companionsNumber++;
+		std::cout << "Companion1" << std::endl;
+	}
+	if (companionsNumber == 1) {
+		Companion companion(companionTexture, {  position.x  + 64, position.y, 32, 32 }, 32, 32);
+		companions.push_back(companion);
+		companionsNumber++;
+		std::cout << "Companion2" << std::endl;
+
+	}
+	else if (companionsNumber >= maxCompanionsNumber) {
+		companionsNumber == maxCompanionsNumber;
+		std::cout << "Max Companions!" << std::endl;
+	};
+}
 
 Spaceship::~Spaceship() {
 

@@ -1,21 +1,20 @@
 #include "Missile.h"
 
-Missile::Missile(SDL_Texture* texture, SDL_Rect position): damage(1)
+Missile::Missile(SDL_Texture* texture, SDL_Rect position, int missilePowerUpSprite): damage(1)
 {
     this->texture = texture;
     this->position = position;
     this->posX = position.x;
     this->posY = position.y;
-    this->textureWidth = textureWidth;
-    this->textureHeight = textureHeight;
 
     this->frameWidth = 16;
     this->frameHeight = 16;
     this->frameTime = 0.0f;
     this->currentFrame = 0;
     this->numFrames = 6;
-
-    this->spriteRectObject = { 0, 0, frameWidth, frameHeight };
+    this->missilePowerUpSprite = missilePowerUpSprite; //receives from SpaceShip and Companions the multiplier (0, 1 or 2) to change the spriteRectObject position.y
+                                                       //of the texture (to 0, 16 or 32, respectively), changing the missiles with the powerUps
+    this->spriteRectObject = { 0, 16*missilePowerUpSprite, frameWidth, frameHeight };
 
     this->velocityX = 0.0f;
     this->velocityY = 0.0f;

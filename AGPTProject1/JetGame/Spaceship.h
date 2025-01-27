@@ -2,6 +2,7 @@
 #define SPACESHIP_H
 
 #include "Missile.h"
+#include "Companion.h"
 #include "Pawn.h"
 #include <vector>
 #include <iostream>
@@ -17,17 +18,26 @@ public:
 	void Render(Renderer* renderer) override;
 	void CreateRigidBody(Physics* physics) override;
 	void GetScreenSize(float screenWidth, float screenHeight);
-	void GetMissileTexture(SDL_Texture* missileTexture);
-
+	void StoreMissileTexture(SDL_Texture* missileTexture);
+	void StoreCompanionTexture(SDL_Texture* missileTexture);
+	void WeaponPowerUp();
+	void ShieldPowerUp();
 private:
 	void UpdateAnimation(float deltaTime);
 	void HandleShooting(InputManager* inputManager, float deltaTime);
+	void SpawnCompanion();
 	float missileTimer;
 	float missileCooldown;
 	float lifePoints;
+	int weaponPowerUp;
+	int maxWeaponPowerUp;
+	int companionsNumber;
+	int maxCompanionsNumber;
 	SDL_Texture* missileTexture;
-	std::vector <Missile> missiles;
+	SDL_Texture* companionTexture;
 	b2BodyId rigidbodyId;
 	b2Transform rigidbodyTransform;
+	std::vector <Missile> missiles;
+	std::vector <Companion> companions;
 };
 #endif

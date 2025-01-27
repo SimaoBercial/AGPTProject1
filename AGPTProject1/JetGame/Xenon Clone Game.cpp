@@ -17,21 +17,32 @@ int main(int argc, char** argv) {
     }
 
 
-    SDL_Texture* spaceshipTexture = engine.GetRenderer()->LoadTexture("graphics/Ship1.bmp"); //448x64 (64x64 frames in a 7x1 sprite)
     SDL_Texture* backgroundTexture = engine.GetRenderer()->LoadTexture("graphics/galaxy2.bmp");
     SDL_Texture* parallaxTexture = engine.GetRenderer()->LoadTexture("graphics/Blocks.bmp"); 
+	SDL_Texture* spaceshipTexture = engine.GetRenderer()->LoadTexture("graphics/Ship1.bmp"); //448x64 (64x64 frames in a 7x1 sprite)
     SDL_Texture* missileTexture = engine.GetRenderer()->LoadTexture("graphics/missile.bmp"); //32x48 (16*16 frames in a 2x3 sprite)
 	SDL_Texture* rusherTexture = engine.GetRenderer()->LoadTexture("graphics/rusher.bmp"); //256x192  (64*32 frames in a 4x6 sprite)  
 	SDL_Texture* lonerTexture = engine.GetRenderer()->LoadTexture("graphics/LonerA.bmp"); //256x256 (64x64 frames in a 4x4 sprite) 
     SDL_Texture* droneTexture = engine.GetRenderer()->LoadTexture("graphics/Drone.bmp"); //256x64 (32x32 frames in 8x2 sprite)
-    SDL_Texture* projectilesTexture = engine.GetRenderer()->LoadTexture("graphics/EnWeap6.bmp"); //128x16 frames in 8x1 sprite)
+    SDL_Texture* projectilesTexture = engine.GetRenderer()->LoadTexture("graphics/EnWeap6.bmp"); //128x16 (frames in 8x1 sprite)
+    SDL_Texture* companionTexture = engine.GetRenderer()->LoadTexture("graphics/clone.bmp"); //128x160 (32x32 frames in 4x5 sprite)
+    SDL_Texture* explosionTexture = engine.GetRenderer()->LoadTexture("graphics/explode16.bmp"); //80x32 (16x16 frames in 5x2 sprite)
+    SDL_Texture* shieldPowerTexture = engine.GetRenderer()->LoadTexture("graphics/PUShield.bmp.bmp"); //128x64 (32x32 frames in 5x2 sprite)
+    SDL_Texture* weaponPowerUpTexture = engine.GetRenderer()->LoadTexture("graphics/PUWeapon.bmp"); //128x64 (32x32 frames in 5x2 sprite)
+	SDL_Texture* stoneBigAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/SAster96.bmp"); //480x480 (96x96 frames in a 5x5 sprite)
+	SDL_Texture* stoneMidAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/SAster64.bmp"); //512x192 (64x64 frames in 8x3 sprite)
+	SDL_Texture* stoneSmallAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/SAster32.bmp"); //256x64 (32x32 frames in a 8x2 sprite)
+	SDL_Texture* metalBigAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/MAster96.bmp"); //480x480 (96x96 frames in a 5x5 sprite)
+	SDL_Texture* metalMidAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/MAster64.bmp"); //512x192 (64x64 frames in 8x3 sprite)
+	SDL_Texture* metalSmallAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/MAster32.bmp"); //256x64 (32x32 frames in a 8x2 sprite)
 
 	Background background;
 	background.Initialize(*backgroundTexture, *parallaxTexture, 1.0f, 640, 480);
 
 	Spaceship spaceship(spaceshipTexture, { 304, 400, 64, 64 }); //instantiates the spaceship/player class for the first time
 	spaceship.GetScreenSize(screenWidth, screenHeigth);
-	spaceship.GetMissileTexture(missileTexture);
+	spaceship.StoreMissileTexture(missileTexture);
+    spaceship.StoreCompanionTexture(companionTexture);
     spaceship.CreateRigidBody(engine.GetPhysicsEngine());
    
     std::vector<Drone> drones; //Drones have a vertical movement, showing horizontal sinusoidal move and appear in packs of 8(see reference video)
