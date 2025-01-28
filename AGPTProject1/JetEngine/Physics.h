@@ -3,24 +3,28 @@
 
 #include "Renderer.h"
 #include "box2d.h"
+#include <iostream>
 
 
 class Physics {
 public:
 	Physics();
 	~Physics();
-	b2BodyId CreateStaticBody(float posX, float posY, float width, float height);
-	b2BodyId CreateDynamicBody(float posX, float posY, bool isBullet, float width, float height);
-	b2Transform GetRigidBodyTransform(b2BodyId bodyId);
-
+	b2WorldId GetWorld();
+	b2ShapeId CreateStaticBody(float posX, float posY, bool isSensor, float width, float height);
+	b2ShapeId CreateDynamicBody(float posX, float posY, bool isSensor, float width, float height);
+	b2Transform GetRigidBodyTransform(b2ShapeId shapeId);
+	void UpdatePhysics();
+	void DetectCollision(b2SensorBeginTouchEvent collision);
+	void Debug(b2Transform* bodyTransform, b2ShapeId shapeId);
+	void SetRenderer(Renderer* renderer);
 
 private:
-
+	Renderer* renderer;
 	b2WorldDef worldDef = b2DefaultWorldDef();
 	b2WorldId worldId = b2CreateWorld(&worldDef);
 	float timeStep;
 	int subStepCount;
 };
-
 
 #endif 

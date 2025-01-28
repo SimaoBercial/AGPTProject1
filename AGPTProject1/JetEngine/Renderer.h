@@ -15,6 +15,7 @@ public:
     void Clear();
     void Render(SDL_Texture* texture, const SDL_Rect* srcRect, const SDL_Rect* dstRect);
     void Present();
+    void Debug(SDL_Rect rect);
     SDL_Renderer* GetSDLRenderer() const;
 
 private:

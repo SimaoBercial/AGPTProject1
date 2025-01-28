@@ -14,7 +14,7 @@ public:
     virtual void Render(Renderer* renderer) = 0;
     virtual SDL_Rect GetBoundingBox() const = 0;
 	virtual void CreateRigidBody(Physics* physics) = 0;
-
+    void SetPhysicsEngine(Physics* physics);
 
 protected:
     SDL_Texture* texture;
@@ -34,7 +34,7 @@ protected:
     int textureWidth;
     int textureHeight;
 
-	b2BodyId rigidbodyId;
+	b2ShapeId rigidbodyId;
 	b2Transform rigidbodyTransform;
 };
 

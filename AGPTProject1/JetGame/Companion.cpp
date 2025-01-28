@@ -8,7 +8,7 @@ Companion::Companion(SDL_Texture* texture, SDL_Rect position, int textureWidth, 
 	lifePoints(10),
 	screenWidth(0),
 	screenHeight(0),
-	rigidbodyId(b2_nullBodyId),
+	rigidbodyId(b2_nullShapeId),
 	rigidbodyTransform(b2Transform_identity),
 	missileTexture(nullptr),
 	movingRight(false),
@@ -92,6 +92,8 @@ void Companion::Render(Renderer* renderer)
 	for (auto& missile : missiles) {
 		missile.Render(renderer);
 	}
+	physics->Debug(&rigidbodyTransform, rigidbodyId);
+
 }
 
 SDL_Rect Companion::GetBoundingBox() const
@@ -101,15 +103,16 @@ SDL_Rect Companion::GetBoundingBox() const
 
 void Companion::CreateRigidBody(Physics* physics)
 {
-	rigidbodyId = physics->CreateDynamicBody(posX, posY, false, 1, 1);
+	rigidbodyId = physics->CreateDynamicBody(posX, posY, true, 1, 1);
 	rigidbodyTransform = physics->GetRigidBodyTransform(rigidbodyId);
-	std::cout << " { " << rigidbodyTransform.p.x << " , " << rigidbodyTransform.p.y << " } " << std::endl; //DEBUG!
+	this->physics = physics;
 }
 
 void Companion::ShootMissile(SDL_Texture* missileTexture)
 {
 	this->missileTexture = missileTexture;
 	Missile missile(missileTexture, { (position.x + position.w / 2) - 8, (position.y - 16), 16, 16 }, weaponPowerUp);
+	missile.CreateRigidBody(physics);
 	missiles.push_back(missile);
 	missileTimer = missileCooldown;
 }

@@ -40,10 +40,11 @@ private:
 	float missileTimer;
 	float moveSpeed;
 	float missileCooldown;
-	b2BodyId rigidbodyId;
+	b2ShapeId rigidbodyId;
 	b2Transform rigidbodyTransform;
 	std::vector <Missile> missiles;
 	SDL_Texture* missileTexture;
+	Physics* physics;
 };
 
 #endif

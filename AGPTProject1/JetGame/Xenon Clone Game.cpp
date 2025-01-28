@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
     SDL_Texture* projectilesTexture = engine.GetRenderer()->LoadTexture("graphics/EnWeap6.bmp"); //128x16 (frames in 8x1 sprite)
     SDL_Texture* companionTexture = engine.GetRenderer()->LoadTexture("graphics/clone.bmp"); //128x160 (32x32 frames in 4x5 sprite)
     SDL_Texture* explosionTexture = engine.GetRenderer()->LoadTexture("graphics/explode16.bmp"); //80x32 (16x16 frames in 5x2 sprite)
-    SDL_Texture* shieldPowerTexture = engine.GetRenderer()->LoadTexture("graphics/PUShield.bmp.bmp"); //128x64 (32x32 frames in 5x2 sprite)
+    SDL_Texture* shieldPowerTexture = engine.GetRenderer()->LoadTexture("graphics/PUShield.bmp"); //128x64 (32x32 frames in 5x2 sprite)
     SDL_Texture* weaponPowerUpTexture = engine.GetRenderer()->LoadTexture("graphics/PUWeapon.bmp"); //128x64 (32x32 frames in 5x2 sprite)
 	SDL_Texture* stoneBigAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/SAster96.bmp"); //480x480 (96x96 frames in a 5x5 sprite)
 	SDL_Texture* stoneMidAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/SAster64.bmp"); //512x192 (64x64 frames in 8x3 sprite)
@@ -36,6 +36,13 @@ int main(int argc, char** argv) {
 	SDL_Texture* metalMidAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/MAster64.bmp"); //512x192 (64x64 frames in 8x3 sprite)
 	SDL_Texture* metalSmallAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/MAster32.bmp"); //256x64 (32x32 frames in a 8x2 sprite)
 
+    Physics* physics = engine.GetPhysicsEngine();
+    physics->SetRenderer(engine.GetRenderer());
+
+    b2WorldId worldId = physics->GetWorld();
+    std::cout << "The world ID is: "<< & worldId << std::endl;
+
+
 	Background background;
 	background.Initialize(*backgroundTexture, *parallaxTexture, 1.0f, 640, 480);
 
@@ -43,7 +50,7 @@ int main(int argc, char** argv) {
 	spaceship.GetScreenSize(screenWidth, screenHeigth);
 	spaceship.StoreMissileTexture(missileTexture);
     spaceship.StoreCompanionTexture(companionTexture);
-    spaceship.CreateRigidBody(engine.GetPhysicsEngine());
+    spaceship.CreateRigidBody(physics);
    
     std::vector<Drone> drones; //Drones have a vertical movement, showing horizontal sinusoidal move and appear in packs of 8(see reference video)
     for (int i = 0; i < 8; ++i) {
@@ -69,10 +76,17 @@ int main(int argc, char** argv) {
     bool isRunning = true;
 
     while (engine.ProcessInput(isRunning)) {
+
+        //////////////////////////////GETTERS
+
         float deltaTime = engine.GetDeltaTime();
         const Uint8* keyState = engine.GetInputManager()->GetKeyState();
 
         spaceship.HandleInput(keyState, deltaTime, engine.GetInputManager());
+
+        /////////////////////// UPDATE
+
+        physics->UpdatePhysics();
 
         spaceship.Update(deltaTime);
 
@@ -88,6 +102,8 @@ int main(int argc, char** argv) {
         }         
 
         background.Update(deltaTime);
+
+        /////////////////// RENDER
 
         engine.GetRenderer()->Clear();
 

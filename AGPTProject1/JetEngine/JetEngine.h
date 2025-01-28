@@ -5,6 +5,7 @@
 #include "Renderer.h"
 #include "InputManager.h"
 #include "Pawn.h"
+#include "GameObject.h"
 #include "Missile.h"
 #include "Enemy.h"
 #include <vector>

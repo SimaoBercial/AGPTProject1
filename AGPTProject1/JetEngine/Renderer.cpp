@@ -52,6 +52,11 @@ void Renderer::Present() {
     SDL_RenderPresent(renderer);
 }
 
+void Renderer::Debug(SDL_Rect rect) {
+	SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+	SDL_RenderDrawRect(renderer, &rect);
+    SDL_RenderFillRect(renderer, &rect);
+};
 
 
 SDL_Renderer* Renderer::GetSDLRenderer() const {

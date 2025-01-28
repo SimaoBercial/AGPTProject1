@@ -11,10 +11,11 @@ companionsNumber(0),
 maxCompanionsNumber(2),
 companionTexture(nullptr),
 missileTexture(nullptr),
-rigidbodyId(b2_nullBodyId),
+rigidbodyId(b2_nullShapeId),
 rigidbodyTransform(b2Transform_identity),
 missiles{},
-companions{}
+companions{},
+physics(nullptr)
 { 
 	this->texture = texture;
 	this->position = position; //start position of the sprite, on the screen
@@ -110,10 +111,13 @@ void Spaceship::HandleInput(const Uint8* keyState, float deltaTime, InputManager
 		}
 	}
 
-	//DEBUGS!/////////////////////
+	//////////////////////////////////////////////////////////////////DEBUG/////////////////////////////////////////////////////////////////////////////
+
 	if (keyState[SDL_SCANCODE_E]) {
 		SpawnCompanion();
 	}
+
+	//////////////////////////////////////////////////////////////////DEBUG/////////////////////////////////////////////////////////////////////////////
 
 	if (inputManager->IsGamepadConnected()) {
 		float axisX = inputManager->GetAxis(SDL_CONTROLLER_AXIS_LEFTX);
@@ -248,6 +252,7 @@ void Spaceship::HandleShooting(InputManager* inputManager, float deltaTime) {
 			companion.ShootMissile(missileTexture);
 	}
 		missiles.push_back(missile);
+		missile.CreateRigidBody(physics);
 		missileTimer = missileCooldown;
 	}
 }
@@ -261,13 +266,15 @@ void Spaceship::Render(Renderer* renderer)
 	for (auto& companion : companions) {
 		companion.Render(renderer);
 	}
+	physics->Debug(&rigidbodyTransform, rigidbodyId);
 }
 
 void Spaceship::CreateRigidBody(Physics* physics)
 {
-	rigidbodyId = physics->CreateDynamicBody(posX, posY, false, 3, 2);
+	rigidbodyId = physics->CreateDynamicBody(posX, posY, true, 30, 20);
 	rigidbodyTransform = physics->GetRigidBodyTransform(rigidbodyId);
-	std::cout << " { " << rigidbodyTransform.p.x << " , " << rigidbodyTransform.p.y << " } " << std::endl; //DEBUG!
+	this->physics = physics;
+	physics->Debug(&rigidbodyTransform, rigidbodyId);
 }
 
 void Spaceship::WeaponPowerUp() {
@@ -283,20 +290,18 @@ void Spaceship::ShieldPowerUp()
 void Spaceship::SpawnCompanion() {
 	if (companionsNumber == 0) {
 		Companion companion(companionTexture, { position.x - 64, position.y , 32, 32 }, 32, 32);
+		companion.CreateRigidBody(physics);
 		companions.push_back(companion);
 		companionsNumber++;
-		std::cout << "Companion1" << std::endl;
 	}
 	if (companionsNumber == 1) {
 		Companion companion(companionTexture, {  position.x  + 64, position.y, 32, 32 }, 32, 32);
+		companion.CreateRigidBody(physics);
 		companions.push_back(companion);
 		companionsNumber++;
-		std::cout << "Companion2" << std::endl;
-
 	}
 	else if (companionsNumber >= maxCompanionsNumber) {
 		companionsNumber == maxCompanionsNumber;
-		std::cout << "Max Companions!" << std::endl;
 	};
 }
 

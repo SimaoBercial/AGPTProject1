@@ -35,9 +35,10 @@ private:
 	int maxCompanionsNumber;
 	SDL_Texture* missileTexture;
 	SDL_Texture* companionTexture;
-	b2BodyId rigidbodyId;
+	b2ShapeId rigidbodyId;
 	b2Transform rigidbodyTransform;
 	std::vector <Missile> missiles;
 	std::vector <Companion> companions;
+	Physics* physics;
 };
 #endif

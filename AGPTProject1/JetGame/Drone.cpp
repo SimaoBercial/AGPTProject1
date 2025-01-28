@@ -68,7 +68,7 @@ SDL_Rect Drone::GetBoundingBox() const {
 
 void Drone::CreateRigidBody(Physics* physics)
 {
-	rigidbodyId = physics->CreateDynamicBody(posX, posY, false, 1, 1);
+	rigidbodyId = physics->CreateDynamicBody(posX, posY, false, 10, 10);
 	rigidbodyTransform = physics->GetRigidBodyTransform(rigidbodyId);
-	std::cout << " { " << rigidbodyTransform.p.x << " , " << rigidbodyTransform.p.y << " } " << std::endl;
+	physics->Debug(&rigidbodyTransform, rigidbodyId);
 }

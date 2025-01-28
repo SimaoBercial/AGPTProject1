@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Physics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\Physics.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Rusher.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetGame\\Rusher.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Physics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\Physics.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Spaceship.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetGame\\Spaceship.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,24 +23,40 @@
       "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetGame\\Companion.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Companion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetGame\\Companion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\ShieldPowerUp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetGame\\ShieldPowerUp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Loner.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetGame\\Loner.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Drone.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetGame\\Drone.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Missile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetEngine\\Missile.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\Renderer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Spaceship.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetGame\\Spaceship.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Pawn.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\Pawn.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Missile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetEngine\\Missile.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{393E0CFA-72D5-4C2E-B87A-724E8F279AA1}|JetEngine\\JetEngine.vcxproj|solutionrelative:JetEngine\\Renderer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Xenon Clone Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{E5ACC890-5C63-438F-B6B9-D7D7DB7C2E3E}|JetGame\\JetGame.vcxproj|solutionrelative:JetGame\\Xenon Clone Game.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,101 +66,194 @@
       "DocumentGroups": [
         {
           "DockedWidth": 291,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Physics.h",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Physics.h",
+              "RelativeDocumentMoniker": "JetEngine\\Physics.h",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Physics.h",
+              "RelativeToolTip": "JetEngine\\Physics.h",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T00:02:46.637Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Physics.cpp",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Physics.cpp",
+              "RelativeDocumentMoniker": "JetEngine\\Physics.cpp",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Physics.cpp",
+              "RelativeToolTip": "JetEngine\\Physics.cpp",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T00:02:48.809Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d3750d8a-574b-4fb3-b7e2-aa8af40e8231}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Pawn.h",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Pawn.h",
-              "RelativeDocumentMoniker": "JetEngine\\Pawn.h",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Pawn.h",
-              "RelativeToolTip": "JetEngine\\Pawn.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-27T15:35:52.962Z",
+              "DocumentIndex": 1,
+              "Title": "Rusher.cpp",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Rusher.cpp",
+              "RelativeDocumentMoniker": "JetGame\\Rusher.cpp",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Rusher.cpp",
+              "RelativeToolTip": "JetGame\\Rusher.cpp",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEIAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T02:47:26.122Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Spaceship.h",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Spaceship.h",
-              "RelativeDocumentMoniker": "JetGame\\Spaceship.h",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Spaceship.h",
-              "RelativeToolTip": "JetGame\\Spaceship.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAWwB8AAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-27T11:22:58.606Z",
+              "DocumentIndex": 5,
+              "Title": "ShieldPowerUp.cpp",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\ShieldPowerUp.cpp",
+              "RelativeDocumentMoniker": "JetGame\\ShieldPowerUp.cpp",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\ShieldPowerUp.cpp",
+              "RelativeToolTip": "JetGame\\ShieldPowerUp.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T02:47:24.654Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Missile.h",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Missile.h",
-              "RelativeDocumentMoniker": "JetEngine\\Missile.h",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Missile.h",
-              "RelativeToolTip": "JetEngine\\Missile.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-24T14:45:30.462Z",
+              "Title": "Loner.cpp",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Loner.cpp",
+              "RelativeDocumentMoniker": "JetGame\\Loner.cpp",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Loner.cpp",
+              "RelativeToolTip": "JetGame\\Loner.cpp",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T02:47:16.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Companion.h",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Companion.h",
-              "RelativeDocumentMoniker": "JetGame\\Companion.h",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Companion.h",
-              "RelativeToolTip": "JetGame\\Companion.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-27T13:16:16.41Z",
+              "DocumentIndex": 7,
+              "Title": "Drone.cpp",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Drone.cpp",
+              "RelativeDocumentMoniker": "JetGame\\Drone.cpp",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Drone.cpp",
+              "RelativeToolTip": "JetGame\\Drone.cpp",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAEgAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T02:47:07.125Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Companion.cpp",
               "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Companion.cpp",
               "RelativeDocumentMoniker": "JetGame\\Companion.cpp",
               "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Companion.cpp",
               "RelativeToolTip": "JetGame\\Companion.cpp",
-              "ViewState": "AgIAADAAAAAAAAAAAIAwwFUAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAF8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-27T13:16:10.256Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Spaceship.cpp",
-              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Spaceship.cpp",
-              "RelativeDocumentMoniker": "JetGame\\Spaceship.cpp",
-              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Spaceship.cpp",
-              "RelativeToolTip": "JetGame\\Spaceship.cpp",
-              "ViewState": "AgIAAJsAAAAAAAAAAIAwwLUAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-23T20:45:45.713Z",
+              "WhenOpened": "2025-01-28T02:46:50.236Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Spaceship.cpp",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Spaceship.cpp",
+              "RelativeDocumentMoniker": "JetGame\\Spaceship.cpp",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Spaceship.cpp",
+              "RelativeToolTip": "JetGame\\Spaceship.cpp",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAAAwBAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T02:01:10.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Spaceship.h",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Spaceship.h",
+              "RelativeDocumentMoniker": "JetGame\\Spaceship.h",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Spaceship.h",
+              "RelativeToolTip": "JetGame\\Spaceship.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACkAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T02:44:14.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Renderer.h",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Renderer.h",
+              "RelativeDocumentMoniker": "JetEngine\\Renderer.h",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Renderer.h",
+              "RelativeToolTip": "JetEngine\\Renderer.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T02:42:37.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Missile.cpp",
               "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Missile.cpp",
               "RelativeDocumentMoniker": "JetEngine\\Missile.cpp",
               "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Missile.cpp",
               "RelativeToolTip": "JetEngine\\Missile.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-27T12:03:36.146Z",
+              "WhenOpened": "2025-01-28T02:33:31.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Missile.h",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Missile.h",
+              "RelativeDocumentMoniker": "JetEngine\\Missile.h",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Missile.h",
+              "RelativeToolTip": "JetEngine\\Missile.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-28T02:33:27.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Renderer.cpp",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Renderer.cpp",
+              "RelativeDocumentMoniker": "JetEngine\\Renderer.cpp",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetEngine\\Renderer.cpp",
+              "RelativeToolTip": "JetEngine\\Renderer.cpp",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAADkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T02:23:45.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Xenon Clone Game.cpp",
+              "DocumentMoniker": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Xenon Clone Game.cpp",
+              "RelativeDocumentMoniker": "JetGame\\Xenon Clone Game.cpp",
+              "ToolTip": "D:\\Desktop\\AGPTProject1\\AGPTProject1\\JetGame\\Xenon Clone Game.cpp",
+              "RelativeToolTip": "JetGame\\Xenon Clone Game.cpp",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-28T01:19:27.96Z",
               "EditorCaption": ""
             }
           ]
