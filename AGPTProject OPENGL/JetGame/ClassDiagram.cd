@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Background">
+    <Position X="1.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAABAAQBAAAAACgAAAAAAABAAABAoQAAAIAI=</HashCode>
+      <FileName>Background.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy">
+    <Position X="3.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwQAAgAAgAAAAQIAAAAAIAQgAAAAAwAAABAAAAAAgAA=</HashCode>
+      <FileName>C:\Users\Sauchixa\Desktop\AGPTProject1\AGPTProject1\JetEngine\Enemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Missile">
+    <Position X="5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAgAACAQAAAAAAIEAgAAAAQwAgABAAAAAAAAE=</HashCode>
+      <FileName>C:\Users\Sauchixa\Desktop\AGPTProject1\AGPTProject1\JetEngine\Missile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAkAQAAQABAAgQIASAAAIIQhAgBBAAwQAAgBA=</HashCode>
+      <FileName>C:\Users\Sauchixa\Desktop\AGPTProject1\AGPTProject1\JetEngine\Player.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

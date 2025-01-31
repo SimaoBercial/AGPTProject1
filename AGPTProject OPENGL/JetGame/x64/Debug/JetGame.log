@@ -1,0 +1,74 @@
+﻿  Enemy.cpp
+  Missile.cpp
+  Player.cpp
+  Background.cpp
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetEngine\Missile.cpp(8,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetEngine\Missile.cpp(9,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetEngine\Missile.cpp(41,84): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetEngine\Missile.cpp(41,72): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Background.cpp(21,19): warning C4244: '+=': conversion from 'float' to 'int', possible loss of data
+  Companion.cpp
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Companion.cpp(22,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Companion.cpp(23,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Drone.cpp
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Drone.cpp(13,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Drone.cpp(14,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Drone.cpp(49,16): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Enemies.cpp
+  Hazards.cpp
+  Loner.cpp
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Loner.cpp(7,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Loner.cpp(8,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  MetalAsteroid.cpp
+  Projectiles.cpp
+  Rusher.cpp
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Rusher.cpp(7,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Rusher.cpp(8,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  ShieldPowerUp.cpp
+  Spaceship.cpp
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Spaceship.cpp(25,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Spaceship.cpp(26,26): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Spaceship.cpp(43,25): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Spaceship.cpp(44,26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  StoneAsteroid.cpp
+  WeaponPowerUp.cpp
+  Generating Code...
+  Xenon Clone Game.cpp
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Xenon Clone Game.cpp(60,42): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\AGPTProject1\AGPTProject OPENGL\JetGame\Xenon Clone Game.cpp(60,29): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  LINK : D:\Desktop\AGPTProject1\AGPTProject OPENGL\x64\Debug\Xenon Clone Game.exe not found or not built by the last incremental link; performing full link
+JetEngine.lib(geometry.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(geometry.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(types.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(types.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(world.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(world.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(body.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(body.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(shape.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(shape.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(math_functions.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(math_functions.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(hull.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(hull.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(distance.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(distance.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(core.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(core.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(timer.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(timer.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(contact.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(contact.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(island.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(island.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(joint.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(joint.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(solver_set.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(solver_set.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(bitset.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(bitset.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(table.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(table.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(aabb.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(aabb.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(dynamic_tree.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(dynamic_tree.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(broad_phase.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(broad_phase.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(constraint_graph.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(constraint_graph.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(id_pool.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(id_pool.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(stack_allocator.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(stack_allocator.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(solver.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(solver.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(manifold.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(manifold.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(array.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(array.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(distance_joint.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(distance_joint.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(motor_joint.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(motor_joint.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(mouse_joint.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(mouse_joint.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(prismatic_joint.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(prismatic_joint.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(revolute_joint.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(revolute_joint.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(weld_joint.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(weld_joint.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(wheel_joint.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(wheel_joint.obj)' or at ''; linking object as if no debug info
+JetEngine.lib(contact_solver.obj) : warning LNK4099: PDB '' was not found with 'JetEngine.lib(contact_solver.obj)' or at ''; linking object as if no debug info
+LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+  JetGame.vcxproj -> D:\Desktop\AGPTProject1\AGPTProject OPENGL\x64\Debug\Xenon Clone Game.exe

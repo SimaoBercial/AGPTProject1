@@ -1,0 +1,2 @@
+#include "MetalAsteroid.h"
+
