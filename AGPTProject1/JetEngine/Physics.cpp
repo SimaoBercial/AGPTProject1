@@ -93,8 +93,6 @@ void Physics::Debug(b2Transform* bodyTransform, b2ShapeId shapeId)
 				static_cast<int>(width),         // Width scaled to pixels
 				static_cast<int>(height)         // Height scaled to pixels
 	};
-
-	renderer->Debug(rect);
 }
 
 void Physics::SetRenderer(Renderer* renderer) // FOR DEBUGGING PURPOSES ONLY

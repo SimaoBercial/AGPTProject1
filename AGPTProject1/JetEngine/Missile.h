@@ -5,7 +5,7 @@
 
 class Missile : public GameObject {
 public:
-    Missile(SDL_Texture* texture, SDL_Rect position, int missilePowerUpSprite);
+    Missile(GLuint texture, SDL_Rect position, int missilePowerUpSprite);
     ~Missile();
 
     void Update(float deltaTime) override;

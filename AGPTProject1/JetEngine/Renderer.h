@@ -1,8 +1,12 @@
 #ifndef RENDERER_H
 #define RENDERER_H
 
-#include <string>
 #include <SDL.h>
+#include <glm/glm.hpp>
+#include <string>
+#include <glad/glad.h>
+
+class Shader;
 
 class Renderer {
 public:
@@ -11,15 +15,15 @@ public:
 
     bool Initialize(SDL_Window* window);
     void Shutdown();
-    SDL_Texture* LoadTexture(const std::string& filePath);
+    GLuint LoadTexture(const std::string& filePath);
     void Clear();
-    void Render(SDL_Texture* texture, const SDL_Rect* srcRect, const SDL_Rect* dstRect);
-    void Present();
-    void Debug(SDL_Rect rect);
-    SDL_Renderer* GetSDLRenderer() const;
+    void Render(GLuint texture, const SDL_Rect& srcRect, const SDL_Rect& dstRect);
+    void Present(SDL_Window* window);
 
 private:
-    SDL_Renderer* renderer;
+    GLuint vao;
+    GLuint vbo;
+    Shader* shader;
 };
 
-#endif
+#endif // RENDERER_H

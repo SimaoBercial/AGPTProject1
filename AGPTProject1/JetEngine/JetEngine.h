@@ -1,14 +1,13 @@
-#ifndef JETENGINE_H
-#define JETENGINE_H
+#ifndef JET_ENGINE_H
+#define JET_ENGINE_H
 
+#include <SDL.h>
 #include <string>
+#include <glad/glad.h>
+#include <glm/glm.hpp>
 #include "Renderer.h"
 #include "InputManager.h"
-#include "Pawn.h"
-#include "GameObject.h"
-#include "Missile.h"
-#include "Enemy.h"
-#include <vector>
+#include "Physics.h"
 
 class JetEngine {
 public:
@@ -24,14 +23,17 @@ public:
     InputManager* GetInputManager();
     Physics* GetPhysicsEngine();
 
+    SDL_GLContext GetOpenGLContext() const;
+    SDL_Window* GetWindow() const;
+
 private:
     SDL_Window* window;
-    Uint32 prevTime, currentTime;
-    float deltaTime;
-
     Renderer renderer;
     InputManager inputManager;
     Physics physics;
+
+    Uint32 prevTime, currentTime;
+    float deltaTime;
 };
 
-#endif
+#endif // JET_ENGINE_H

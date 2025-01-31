@@ -3,19 +3,21 @@
 
 #include "Enemies.h"
 
-//This enemy moves vertically at a certain speed.
+// This enemy moves vertically at a certain speed.
 
 class Rusher : public Enemies
 {
 public:
-	Rusher(SDL_Texture* texture, SDL_Rect position, int textureWidth, int textureHeight);
-	~Rusher();
+    Rusher(GLuint texture, SDL_Rect position, int textureWidth, int textureHeight);
+    ~Rusher();
 
-	void Update(float deltaTime) override;
-	void Render(Renderer* renderer) override;
-	SDL_Rect GetBoundingBox() const override;
-	void CreateRigidBody(Physics* physics) override;
+    void Update(float deltaTime) override;
+    void Render(Renderer* renderer) override;
+    SDL_Rect GetBoundingBox() const override;
+    void CreateRigidBody(Physics* physics) override;
 
+private:
+    GLuint texture;
 };
 
 #endif

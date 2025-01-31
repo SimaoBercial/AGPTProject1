@@ -16,7 +16,7 @@ public:
 	virtual void CreateRigidBody(Physics* physics) = 0;
 
 protected:
-	SDL_Texture* texture;
+	GLuint* texture;
 	SDL_Rect position; //the space on the screen where the player is rendered
 	SDL_Rect spriteRectPlayer; //the bit of the source texture that is rendered. NULL for the entire texture
 	int numFrames; //number of frames the sprite sheet has

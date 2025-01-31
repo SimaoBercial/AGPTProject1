@@ -6,122 +6,124 @@
 #include "Background.h"
 #include <iostream>
 #include "Missile.h"
+#include "Shader.h"
+#include "Renderer.h"
+#include <glad/glad.h>
+#include <SDL.h>
 
 int main(int argc, char** argv) {
     int screenWidth = 640;
-    int screenHeigth = 480;
+    int screenHeight = 480;
 
-    JetEngine engine; //instantiates the engine
-    if (!engine.Initialize("SDL2 Engine Game", screenWidth, screenHeigth)) {
+    JetEngine engine;
+    if (!engine.Initialize("Xenon Clone Game", screenWidth, screenHeight)) {
         return -1;
     }
 
+    SDL_GLContext context = engine.GetOpenGLContext();
+    if (!gladLoadGLLoader((GLADloadproc)SDL_GL_GetProcAddress)) {
+        std::cerr << "Failed to initialize GLAD!" << std::endl;
+        return -1;
+    }
 
-    SDL_Texture* backgroundTexture = engine.GetRenderer()->LoadTexture("graphics/galaxy2.bmp");
-    SDL_Texture* parallaxTexture = engine.GetRenderer()->LoadTexture("graphics/Blocks.bmp"); 
-	SDL_Texture* spaceshipTexture = engine.GetRenderer()->LoadTexture("graphics/Ship1.bmp"); //448x64 (64x64 frames in a 7x1 sprite)
-    SDL_Texture* missileTexture = engine.GetRenderer()->LoadTexture("graphics/missile.bmp"); //32x48 (16*16 frames in a 2x3 sprite)
-	SDL_Texture* rusherTexture = engine.GetRenderer()->LoadTexture("graphics/rusher.bmp"); //256x192  (64*32 frames in a 4x6 sprite)  
-	SDL_Texture* lonerTexture = engine.GetRenderer()->LoadTexture("graphics/LonerA.bmp"); //256x256 (64x64 frames in a 4x4 sprite) 
-    SDL_Texture* droneTexture = engine.GetRenderer()->LoadTexture("graphics/Drone.bmp"); //256x64 (32x32 frames in 8x2 sprite)
-    SDL_Texture* projectilesTexture = engine.GetRenderer()->LoadTexture("graphics/EnWeap6.bmp"); //128x16 (frames in 8x1 sprite)
-    SDL_Texture* companionTexture = engine.GetRenderer()->LoadTexture("graphics/clone.bmp"); //128x160 (32x32 frames in 4x5 sprite)
-    SDL_Texture* explosionTexture = engine.GetRenderer()->LoadTexture("graphics/explode16.bmp"); //80x32 (16x16 frames in 5x2 sprite)
-    SDL_Texture* shieldPowerTexture = engine.GetRenderer()->LoadTexture("graphics/PUShield.bmp"); //128x64 (32x32 frames in 5x2 sprite)
-    SDL_Texture* weaponPowerUpTexture = engine.GetRenderer()->LoadTexture("graphics/PUWeapon.bmp"); //128x64 (32x32 frames in 5x2 sprite)
-	SDL_Texture* stoneBigAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/SAster96.bmp"); //480x480 (96x96 frames in a 5x5 sprite)
-	SDL_Texture* stoneMidAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/SAster64.bmp"); //512x192 (64x64 frames in 8x3 sprite)
-	SDL_Texture* stoneSmallAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/SAster32.bmp"); //256x64 (32x32 frames in a 8x2 sprite)
-	SDL_Texture* metalBigAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/MAster96.bmp"); //480x480 (96x96 frames in a 5x5 sprite)
-	SDL_Texture* metalMidAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/MAster64.bmp"); //512x192 (64x64 frames in 8x3 sprite)
-	SDL_Texture* metalSmallAsteroidsTexture = engine.GetRenderer()->LoadTexture("graphics/MAster32.bmp"); //256x64 (32x32 frames in a 8x2 sprite)
+    Renderer* renderer = engine.GetRenderer();
+
+    GLuint backgroundTexture = renderer->LoadTexture("graphics/galaxy2.bmp");
+    GLuint parallaxTexture = renderer->LoadTexture("graphics/Blocks.bmp");
+    GLuint spaceshipTexture = renderer->LoadTexture("graphics/Ship1.bmp");
+    GLuint missileTexture = renderer->LoadTexture("graphics/missile.bmp");
+    GLuint rusherTexture = renderer->LoadTexture("graphics/rusher.bmp");
+    GLuint lonerTexture = renderer->LoadTexture("graphics/LonerA.bmp");
+    GLuint droneTexture = renderer->LoadTexture("graphics/Drone.bmp");
+    GLuint projectilesTexture = renderer->LoadTexture("graphics/EnWeap6.bmp");
+    GLuint companionTexture = renderer->LoadTexture("graphics/clone.bmp");
+    GLuint explosionTexture = renderer->LoadTexture("graphics/explode16.bmp");
+    GLuint shieldPowerTexture = renderer->LoadTexture("graphics/PUShield.bmp");
+    GLuint weaponPowerUpTexture = renderer->LoadTexture("graphics/PUWeapon.bmp");
+    GLuint stoneBigAsteroidsTexture = renderer->LoadTexture("graphics/SAster96.bmp");
+    GLuint stoneMidAsteroidsTexture = renderer->LoadTexture("graphics/SAster64.bmp");
+    GLuint stoneSmallAsteroidsTexture = renderer->LoadTexture("graphics/SAster32.bmp");
+    GLuint metalBigAsteroidsTexture = renderer->LoadTexture("graphics/MAster96.bmp");
+    GLuint metalMidAsteroidsTexture = renderer->LoadTexture("graphics/MAster64.bmp");
+    GLuint metalSmallAsteroidsTexture = renderer->LoadTexture("graphics/MAster32.bmp");
 
     Physics* physics = engine.GetPhysicsEngine();
-    physics->SetRenderer(engine.GetRenderer());
+    physics->SetRenderer(renderer);
 
     b2WorldId worldId = physics->GetWorld();
-    std::cout << "The world ID is: "<< & worldId << std::endl;
+    std::cout << "The world ID is: " << &worldId << std::endl;
 
+    Background background;
+    background.Initialize(parallaxTexture, backgroundTexture, 1.0f, screenWidth, screenHeight);
 
-	Background background;
-	background.Initialize(*backgroundTexture, *parallaxTexture, 1.0f, 640, 480);
-
-	Spaceship spaceship(spaceshipTexture, { 304, 400, 64, 64 }); //instantiates the spaceship/player class for the first time
-	spaceship.GetScreenSize(screenWidth, screenHeigth);
-	spaceship.StoreMissileTexture(missileTexture);
+    Spaceship spaceship(spaceshipTexture, { 304, 400, 64, 64 });
+    spaceship.GetScreenSize(screenWidth, screenHeight);
+    spaceship.StoreMissileTexture(missileTexture);
     spaceship.StoreCompanionTexture(companionTexture);
     spaceship.CreateRigidBody(physics);
-   
-    std::vector<Drone> drones; //Drones have a vertical movement, showing horizontal sinusoidal move and appear in packs of 8(see reference video)
+
+    std::vector<Drone> drones;
     for (int i = 0; i < 8; ++i) {
-        Drone drone(droneTexture, { 100 , 10 + i * 32, 32, 32 }, 256, 640);
-		drones.push_back(drone);
+        Drone drone(droneTexture, { 100, 10 + i * 32, 32, 32 }, 256, 640);
+        drones.push_back(drone);
         drone.CreateRigidBody(engine.GetPhysicsEngine());
     }
 
-	std::vector<Loner> loners; //This enemy moves horizontally at a certain speed. The loner fires at each 2 second interval a projectile in the Spaceship direction
-	for (int i = 0; i < 5; ++i) {
+    std::vector<Loner> loners;
+    for (int i = 0; i < 5; ++i) {
         Loner loner(lonerTexture, { 0 + i * 100, 50, 64, 64 }, 256, 256);
-		loners.push_back(loner);
+        loners.push_back(loner);
         loner.CreateRigidBody(engine.GetPhysicsEngine());
-	}
+    }
 
-	std::vector<Rusher> rushers; //This enemy moves vertically at a certain speed
-	for (int i = 0; i < 5; ++i) {
-		Rusher rusher(rusherTexture, { 0 + i * 100, 150, 64, 32 }, 256, 192);
-		rushers.push_back(rusher);
+    std::vector<Rusher> rushers;
+    for (int i = 0; i < 5; ++i) {
+        Rusher rusher(rusherTexture, { 0 + i * 100, 150, 64, 32 }, 256, 192);
+        rushers.push_back(rusher);
         rusher.CreateRigidBody(engine.GetPhysicsEngine());
-	}
+    }
 
     bool isRunning = true;
 
     while (engine.ProcessInput(isRunning)) {
-
-        //////////////////////////////GETTERS
-
+        // Get DeltaTime and Input State
         float deltaTime = engine.GetDeltaTime();
         const Uint8* keyState = engine.GetInputManager()->GetKeyState();
-
         spaceship.HandleInput(keyState, deltaTime, engine.GetInputManager());
 
-        /////////////////////// UPDATE
-
+        // Update physics and game objects
         physics->UpdatePhysics();
-
         spaceship.Update(deltaTime);
 
-
-        for (auto& rusher : rushers) {    
- 			rusher.Update(deltaTime);
+        for (auto& rusher : rushers) {
+            rusher.Update(deltaTime);
         }
-		for (auto& loner : loners) {     
- 			loner.Update(deltaTime);
- 		}
+        for (auto& loner : loners) {
+            loner.Update(deltaTime);
+        }
         for (auto& drone : drones) {
             drone.Update(deltaTime);
-        }         
-
+        }
         background.Update(deltaTime);
 
-        /////////////////// RENDER
+        // Clear screen before rendering
+        renderer->Clear();
 
-        engine.GetRenderer()->Clear();
+        // Render background and objects
+        background.Render(renderer);
+        spaceship.Render(renderer);
 
-        background.Render(engine.GetRenderer());
+        for (auto& rusher : rushers) {
+            rusher.Render(renderer);
+        }
+        for (auto& loner : loners) {
+            loner.Render(renderer);
+        }
+        for (auto& drone : drones) {
+            drone.Render(renderer);
+        }
 
-		spaceship.Render(engine.GetRenderer());
-
-        for (auto& Rusher : rushers) {
-            Rusher.Render(engine.GetRenderer());
-		}
-		for (auto& Loner : loners) {
-			Loner.Render(engine.GetRenderer());
- 		}
-		for (auto& Drone : drones) {
-			Drone.Render(engine.GetRenderer());
-		}
-
-        engine.GetRenderer()->Present();
+        renderer->Present(engine.GetWindow());
     }
 
     engine.Shutdown();

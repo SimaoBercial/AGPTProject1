@@ -17,7 +17,7 @@ public:
     void SetPhysicsEngine(Physics* physics);
 
 protected:
-    SDL_Texture* texture;
+    GLuint texture;
     SDL_Rect position;
     SDL_Rect spriteRectObject;
 	int frameWidth;
