@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameObject">
+    <Position X="9.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAkIAAAAABAQAEIAYgAAAIQgAgIBQAwAAACAg=</HashCode>
+      <FileName>GameObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputManager">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAAAQAGAAAIAAAAAAAgAAsAAAAAIAAAAAA=</HashCode>
+      <FileName>InputManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="JetEngine">
+    <Position X="1" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAwAgAIAAARAAAAAgACCoAAAAAAAAmAA=</HashCode>
+      <FileName>JetEngine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pawn">
+    <Position X="4.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAASAkABAAQgBAQgAIAYAAAAIQgAgJBQAwAAAAAE=</HashCode>
+      <FileName>Pawn.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Physics">
+    <Position X="6.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAIACAIAAAAIAAAAAAQAAEAAAKQABEAAggAA=</HashCode>
+      <FileName>Physics.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Renderer">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAAAAAAAAZAAAAAAAQAAAAAAAAAAABCAAABAgQA=</HashCode>
+      <FileName>Renderer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
