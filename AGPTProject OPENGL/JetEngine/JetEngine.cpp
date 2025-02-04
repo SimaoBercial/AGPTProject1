@@ -23,8 +23,8 @@ bool JetEngine::Initialize(const std::string& windowTitle, int width, int height
         return false;
     }
 
-    SDL_GLContext context = SDL_GL_CreateContext(window);
-    if (!context) {
+    glContext = SDL_GL_CreateContext(window);
+    if (!glContext) {
         std::cerr << "SDL_GL_CreateContext Error: " << SDL_GetError() << std::endl;
         return false;
     }
@@ -35,10 +35,8 @@ bool JetEngine::Initialize(const std::string& windowTitle, int width, int height
         return false;
     }
 
-  
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-    glViewport(0, 0, width, height);
 
     if (!renderer.Initialize(window)) {
         return false;
@@ -78,7 +76,7 @@ Physics* JetEngine::GetPhysicsEngine() {
 }
 
 SDL_GLContext JetEngine::GetOpenGLContext() const {
-    return SDL_GL_CreateContext(window);
+    return glContext;
 }
 
 SDL_Window* JetEngine::GetWindow() const {

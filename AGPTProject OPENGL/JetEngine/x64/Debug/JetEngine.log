@@ -1,10 +1,6 @@
-﻿  glad.c
-  GameObject.cpp
-  InputManager.cpp
+﻿  GameObject.cpp
   JetEngine.cpp
-  Pawn.cpp
   Physics.cpp
   Renderer.cpp
-  Shader.cpp
   Generating Code...
-  JetEngine.vcxproj -> D:\Desktop\AGPTProject1\AGPTProject OPENGL\x64\Debug\JetEngine.lib
+  JetEngine.vcxproj -> D:\Downloads\AGPTProject1-main (1)\AGPTProject1-main\AGPTProject OPENGL\x64\Debug\JetEngine.lib

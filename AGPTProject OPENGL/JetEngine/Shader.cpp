@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <vector>
 
 Shader::Shader() : programID(0) {}
 
@@ -9,13 +10,13 @@ Shader::~Shader() {
     if (programID) {
         glDeleteProgram(programID);
     }
+
 }
 
 bool Shader::LoadShader(const std::string& vertexPath, const std::string& fragmentPath) {
 
     std::string vertexSource = LoadShaderSource(vertexPath);
     std::string fragmentSource = LoadShaderSource(fragmentPath);
-
 
     GLuint vertexShader = CompileShader(GL_VERTEX_SHADER, vertexSource);
     GLuint fragmentShader = CompileShader(GL_FRAGMENT_SHADER, fragmentSource);
@@ -47,10 +48,13 @@ GLuint Shader::CompileShader(GLenum shaderType, const std::string& source) {
     if (!success) {
         GLint logLength;
         glGetShaderiv(shader, GL_INFO_LOG_LENGTH, &logLength);
-        char* infoLog = new char[logLength];
-        glGetShaderInfoLog(shader, logLength, nullptr, infoLog);
-        std::cerr << "Shader compilation failed: " << infoLog << std::endl;
-        delete[] infoLog;
+        if (logLength > 0) {
+            std::vector<char> infoLog(logLength);
+            glGetShaderInfoLog(shader, logLength, nullptr, infoLog.data());
+            std::cerr << "Shader compilation failed:\n" << infoLog.data() << std::endl;
+        }
+        glDeleteShader(shader);
+        return 0;
     }
 
     return shader;
@@ -58,6 +62,8 @@ GLuint Shader::CompileShader(GLenum shaderType, const std::string& source) {
 
 bool Shader::LinkProgram(GLuint vertexShader, GLuint fragmentShader) {
     programID = glCreateProgram();
+    std::cout << "Created program with ID: " << programID << std::endl;  // Debugging line
+
     glAttachShader(programID, vertexShader);
     glAttachShader(programID, fragmentShader);
     glLinkProgram(programID);
@@ -67,12 +73,16 @@ bool Shader::LinkProgram(GLuint vertexShader, GLuint fragmentShader) {
     if (!success) {
         GLint logLength;
         glGetProgramiv(programID, GL_INFO_LOG_LENGTH, &logLength);
-        char* infoLog = new char[logLength];
-        glGetProgramInfoLog(programID, logLength, nullptr, infoLog);
-        std::cerr << "Program linking failed: " << infoLog << std::endl;
-        delete[] infoLog;
+        if (logLength > 0) {
+            std::vector<char> infoLog(logLength);
+            glGetProgramInfoLog(programID, logLength, nullptr, infoLog.data());
+            std::cerr << "Shader program linking failed:\n" << infoLog.data() << std::endl;
+        }
+        glDeleteProgram(programID);
         return false;
     }
+
+    std::cout << "Shader program linked successfully with ID: " << programID << std::endl;  // Debugging line
 
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
@@ -80,9 +90,16 @@ bool Shader::LinkProgram(GLuint vertexShader, GLuint fragmentShader) {
     return true;
 }
 
+
 void Shader::Use() {
     glUseProgram(programID);
+
+    GLenum err = glGetError();
+    if (err != GL_NO_ERROR) {
+        std::cerr << "OpenGL Error after glUseProgram: " << err << std::endl;
+    }
 }
+
 
 GLint Shader::GetUniformLocation(const std::string& name) {
     return glGetUniformLocation(programID, name.c_str());
@@ -93,4 +110,8 @@ void Shader::SetMatrix4fv(const std::string& name, const GLfloat* value) {
     if (location != -1) {
         glUniformMatrix4fv(location, 1, GL_TRUE, value);
     }
+}
+
+GLint Shader::GetProgramID() {
+    return(programID);
 }

@@ -13,6 +13,7 @@ public:
     void Use();
     GLint GetUniformLocation(const std::string& name);
     void SetMatrix4fv(const std::string& name, const GLfloat* value);
+    GLint GetProgramID();
 
 private:
     GLuint programID;

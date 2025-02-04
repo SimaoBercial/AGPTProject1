@@ -24,6 +24,7 @@ private:
     GLuint vao;
     GLuint vbo;
     Shader* shader;
+    SDL_Window* window;
 };
 
 #endif // RENDERER_H

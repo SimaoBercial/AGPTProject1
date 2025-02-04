@@ -21,10 +21,6 @@ int main(int argc, char** argv) {
     }
 
     SDL_GLContext context = engine.GetOpenGLContext();
-    if (!gladLoadGLLoader((GLADloadproc)SDL_GL_GetProcAddress)) {
-        std::cerr << "Failed to initialize GLAD!" << std::endl;
-        return -1;
-    }
 
     Renderer* renderer = engine.GetRenderer();
 

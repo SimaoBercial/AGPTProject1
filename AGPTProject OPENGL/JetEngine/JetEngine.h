@@ -28,6 +28,7 @@ public:
 
 private:
     SDL_Window* window;
+    SDL_GLContext glContext;
     Renderer renderer;
     InputManager inputManager;
     Physics physics;
