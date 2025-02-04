@@ -1,0 +1,15 @@
+﻿  Camera.cpp
+  ModelLoader.cpp
+  OpenGLDemo.cpp
+D:\Desktop\CG_Project1_GonçaloMarques_2221930_SimãoBercial_2221924\OpenGLDemo\OpenGLDemo\OpenGLDemo.cpp(24,111): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Desktop\CG_Project1_GonçaloMarques_2221930_SimãoBercial_2221924\OpenGLDemo\OpenGLDemo\OpenGLDemo.cpp(24,98): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+D:\Desktop\CG_Project1_GonçaloMarques_2221930_SimãoBercial_2221924\OpenGLDemo\OpenGLDemo\OpenGLDemo.cpp(71,22): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\CG_Project1_GonçaloMarques_2221930_SimãoBercial_2221924\OpenGLDemo\OpenGLDemo\OpenGLDemo.cpp(82,19): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+D:\Desktop\CG_Project1_GonçaloMarques_2221930_SimãoBercial_2221924\OpenGLDemo\OpenGLDemo\OpenGLDemo.cpp(90,61): warning C4244: 'argument': conversion from 'Sint32' to 'float', possible loss of data
+D:\Desktop\CG_Project1_GonçaloMarques_2221930_SimãoBercial_2221924\OpenGLDemo\OpenGLDemo\OpenGLDemo.cpp(90,42): warning C4244: 'argument': conversion from 'Sint32' to 'float', possible loss of data
+  Shader.cpp
+D:\Desktop\CG_Project1_GonçaloMarques_2221930_SimãoBercial_2221924\OpenGLDemo\OpenGLDemo\Shader.cpp(37,33): warning C4101: 'e': unreferenced local variable
+  stb_image.cpp
+  Generating Code...
+  glad.c
+  OpenGLDemo.vcxproj -> D:\Desktop\CG_Project1_GonçaloMarques_2221930_SimãoBercial_2221924\OpenGLDemo\x64\Debug\OpenGLDemo.exe
