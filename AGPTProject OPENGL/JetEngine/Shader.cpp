@@ -62,7 +62,7 @@ GLuint Shader::CompileShader(GLenum shaderType, const std::string& source) {
 
 bool Shader::LinkProgram(GLuint vertexShader, GLuint fragmentShader) {
     programID = glCreateProgram();
-    std::cout << "Created program with ID: " << programID << std::endl;  // Debugging line
+    std::cout << "Created program with ID: " << programID << std::endl; 
 
     glAttachShader(programID, vertexShader);
     glAttachShader(programID, fragmentShader);
@@ -82,7 +82,7 @@ bool Shader::LinkProgram(GLuint vertexShader, GLuint fragmentShader) {
         return false;
     }
 
-    std::cout << "Shader program linked successfully with ID: " << programID << std::endl;  // Debugging line
+    std::cout << "Shader program linked successfully with ID: " << programID << std::endl;
 
     glDeleteShader(vertexShader);
     glDeleteShader(fragmentShader);
